@@ -1,0 +1,23 @@
+<div *ngIf="{ workouts: workoutsService.workouts$ | async, actions: del$ | async, polling: polling$ | async } as data"  class="row">
+
+	<mat-card *ngFor="let workout of data.workouts" class="example-card">
+
+		<mat-card-header>
+			<mat-card-subtitle>{{ workout.title }}</mat-card-subtitle>
+			<mat-card-title>Agility</mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<p>Repetition: {{ workout.reps }}</p>
+			<p>Load: {{ workout.load }}</p>
+			<mat-divider></mat-divider>
+		</mat-card-content>
+		<mat-card-actions class="row">
+			<button mat-raised-button color="warn" (click)="delSubject.next(workout._id)">Delete</button>
+			<button mat-raised-button color="accent">Like</button>
+		</mat-card-actions>
+		<mat-card-footer>
+			<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+		</mat-card-footer>
+	</mat-card>
+
+</div>
