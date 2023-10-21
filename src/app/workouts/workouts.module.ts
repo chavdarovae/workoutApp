@@ -6,7 +6,7 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { WorkoutCreateComponent } from './workout-create/workout-create.component';
 import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
 import { WorkoutListComponent } from './workout-list/workout-list.component';
-import { workoutRoutes } from './workouts-routing.module';
+import { workoutRoutes } from './workouts.routing';
 
 
 @NgModule({

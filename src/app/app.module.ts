@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { AccountModule } from './account/account.module';
 
 @NgModule({
 	declarations: [
@@ -17,7 +18,8 @@ import { CoreModule } from './core/core.module';
 		AppRoutingModule,
 		CoreModule,
 		HttpClientModule,
-		HttpClientXsrfModule
+		HttpClientXsrfModule,
+		AccountModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
