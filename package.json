@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+	"build:prod-github": "ng build --configuration production --base-href https://chavdarovae.github.io/node-app-frontend/",
+    "deploy": "ngh --dir dist/frontend"
   },
   "private": true,
   "dependencies": {

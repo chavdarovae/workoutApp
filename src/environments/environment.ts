@@ -1,4 +1,4 @@
 export const environment = {
-	production: true,
-  	apiUrl: 'https://express-server-ymju.onrender.com/'
+	production: false,
+  	apiUrl: 'https://express-server-ymju.onrender.com'
 };

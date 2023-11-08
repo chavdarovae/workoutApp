@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, shareReplay, switchMap, tap } from 'rxjs';
+import { environment } from 'src/environments/environment.dev';
 import { IWorkout } from './interface/workout.interfaces';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class WorkoutsService {
-	workoutApi = '/api/workouts';
+	workoutApi = environment.apiUrl + '/api/workouts';
 	_workouts$: BehaviorSubject<any> = new BehaviorSubject([]);
 	workouts$: Observable<IWorkout[]> = this._workouts$.asObservable();
 
