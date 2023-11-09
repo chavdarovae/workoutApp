@@ -70,25 +70,25 @@
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"options": {
-						"browserTarget": "frontend:build",
-						"proxyConfig": "src/proxy.conf.json"
+          "options": {
+            "proxyConfig": "src/proxy.conf.json",
+            "buildTarget": "frontend:build"
 					},
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-						"production": {
-							"browserTarget": "frontend:build:production"
+            "production": {
+              "buildTarget": "frontend:build:production"
 						},
-						"dev": {
-							"browserTarget": "frontend:build:dev"
+            "dev": {
+              "buildTarget": "frontend:build:dev"
 						}
 					},
 					"defaultConfiguration": "dev"
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "frontend:build"
+          "options": {
+            "buildTarget": "frontend:build"
 					}
 				},
 				"test": {

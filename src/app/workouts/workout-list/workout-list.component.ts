@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Observable, Subject, switchMap } from 'rxjs';
+import { Component, inject } from '@angular/core';
 import { IWorkout } from '../interface/workout.interfaces';
 import { WorkoutsService } from '../workouts.service';
 
@@ -9,12 +8,16 @@ import { WorkoutsService } from '../workouts.service';
   styleUrls: ['./workout-list.component.scss']
 })
 export class WorkoutListComponent {
+	private workoutsService = inject(WorkoutsService);
+	workoutList = this.workoutsService.workoutsSnl; // reference to signal not the value of the signal
+	selectedWorkout = this.workoutsService.selectedWorkoutSnl; // reference to signal not the value of the signal
 
-	polling$: Observable<IWorkout[]> =this.workoutsService.getWorkouts();
-	delSubject: Subject<string> = new Subject();
-	del$: Observable<any> = this.delSubject.asObservable().pipe(
-		switchMap((id: string) => this.workoutsService.deleteWorkout(id))
-	);
+	deleteWorkout(workout: IWorkout) {
+		this.workoutsService.modifyWorkout(workout, 'delete');
+	}
 
-	constructor (public workoutsService: WorkoutsService) {}
+	likeWorkout(workout: IWorkout) {
+		workout.likes = workout.likes ? workout.likes + 1 : 1;
+		this.workoutsService.modifyWorkout(workout, 'modify');
+	}
 }

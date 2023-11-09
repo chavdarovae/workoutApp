@@ -1,21 +1,27 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, shareReplay, switchMap, tap } from 'rxjs';
+import { Injectable, Signal, WritableSignal, inject, signal } from '@angular/core';
+import { toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { BehaviorSubject, Observable, filter, shareReplay, switchMap, tap } from 'rxjs';
 import { environment } from 'src/environments/environment.dev';
-import { IWorkout } from './interface/workout.interfaces';
+import { IWorkout, IWorkoutActions } from './interface/workout.interfaces';
+
+
+export type WorkoutUserActions = 'delete' | 'modify';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class WorkoutsService {
-	workoutApi = environment.apiUrl + '/api/workouts';
-	_workouts$: BehaviorSubject<any> = new BehaviorSubject([]);
-	workouts$: Observable<IWorkout[]> = this._workouts$.asObservable();
+	private http = inject(HttpClient);
 
+	workoutApi = environment.apiUrl + '/api/workouts';
 	_refreshList$: BehaviorSubject<any> = new BehaviorSubject(true);
 
+	modifyWorkoutListSubj: BehaviorSubject<any> = new BehaviorSubject({ workout: {}, action: 'like' });
+	workoutsSnl: Signal<IWorkout[]> = toSignal(this.getWorkouts(), { initialValue: [] });
 
-	constructor( private http: HttpClient) {}
+	private selectedWorkoutIdSnl: WritableSignal<string | undefined> = signal(undefined);
+	selectedWorkoutSnl: Signal<any> = toSignal(this.getWorkout(), { initialValue: undefined });
 
 	refreshList() {
 		this._refreshList$.next(true);
@@ -25,35 +31,42 @@ export class WorkoutsService {
 	getWorkouts(): Observable<IWorkout[]> {
 		return this._refreshList$.asObservable().pipe(
 			switchMap(() => this.http.get<IWorkout[]>(this.workoutApi)),
-			tap((res) => this._workouts$.next(res)),
 			shareReplay()
 		);
 	}
 
 	// GET a single workout
-	getWorkout(id: string): Observable<any> {
-		return this.http.get<IWorkout>(this.workoutApi + '/' + id);
+	getWorkout(): Observable<any> {
+		return toObservable(this.selectedWorkoutIdSnl).pipe(
+			filter((id: string | undefined) => !!id),
+			switchMap((id: string | undefined) => this.http.get<IWorkout>(this.workoutApi + '/' + id)),
+			switchMap(() => this.modifyWorkoutListSubj.asObservable()
+				.pipe(
+					switchMap((actionData: IWorkoutActions) => this.reduceUserDrivenActionsToObservabel(actionData))
+				)
+			),
+			tap(() => this.refreshList()),
+			shareReplay()
+		)
 	}
 
-	// POST a workout
-	createWorkout(workout: any): Observable<any> {
-		return this.http.post<IWorkout>(this.workoutApi, workout).pipe(
-			tap(()=> this.refreshList())
-		);
+	// POST a single workout
+	createWorkout(workout: any): Observable<IWorkout> {
+		return this.http.post<IWorkout>(this.workoutApi, workout)
 	}
 
-	// DELETE a workout
-	deleteWorkout(id: string): Observable<any> {
-		return this.http.delete<IWorkout>(this.workoutApi + '/' + id).pipe(
-			tap(()=> this.refreshList())
-		);
+	// Modify a workout
+	modifyWorkout(workout: IWorkout, action?: WorkoutUserActions): void {
+		this.selectedWorkoutIdSnl.set(workout._id);
+		this.modifyWorkoutListSubj.next({ workout, action });
 	}
 
-	// UPDATE a workout
-	patchWorkout(id: string, workout: any): Observable<any> {
-		return this.http.patch<IWorkout>(this.workoutApi + '/' + id, workout).pipe(
-			tap(()=> this.refreshList())
-		);
+	private reduceUserDrivenActionsToObservabel(actionData: IWorkoutActions): Observable<IWorkout> {
+		switch (actionData.action) {
+			case 'modify':
+				return this.http.patch<IWorkout>(this.workoutApi + '/' + actionData.workout._id, actionData.workout);
+			case 'delete':
+				return this.http.delete<IWorkout>(this.workoutApi + '/' + actionData.workout._id);
+		}
 	}
-
 }
