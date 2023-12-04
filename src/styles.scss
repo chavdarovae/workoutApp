@@ -10,6 +10,7 @@ body {
 	overflow: hidden;
 }
 
+// generals
 .row  {
 	display: flex;
 	flex-flow: row nowrap;
@@ -23,3 +24,16 @@ body {
 	}
 }
 
+
+// utils
+.danger {
+	background-color: $danger;
+}
+
+.success {
+	background-color: $success;
+}
+
+.warn {
+	background-color: $warn;
+}
