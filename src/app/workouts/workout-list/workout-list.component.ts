@@ -11,6 +11,7 @@ export class WorkoutListComponent {
 	private workoutsService = inject(WorkoutsService);
 	workoutList = this.workoutsService.workoutsSnl; // reference to signal not the value of the signal
 	selectedWorkout = this.workoutsService.selectedWorkoutSnl; // reference to signal not the value of the signal
+	createdWorkoutSnl = this.workoutsService.createdWorkoutSnl; // reference to signal not the value of the signal
 
 	deleteWorkout(workout: IWorkout) {
 		this.workoutsService.modifyWorkout(workout, 'delete');

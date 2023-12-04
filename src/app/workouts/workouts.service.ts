@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment.dev';
 import { IWorkout, IWorkoutActions } from './interface/workout.interfaces';
 
 
-export type WorkoutUserActions = 'delete' | 'modify';
+export type WorkoutUserActions = 'delete' | 'modify' | 'create';
 
 @Injectable({
 	providedIn: 'root'
@@ -22,6 +22,7 @@ export class WorkoutsService {
 
 	private selectedWorkoutIdSnl: WritableSignal<string | undefined> = signal(undefined);
 	selectedWorkoutSnl: Signal<any> = toSignal(this.getWorkout(), { initialValue: undefined });
+	createdWorkoutSnl: Signal<any> = toSignal(this.createWorkout(), { initialValue: undefined });
 
 	refreshList() {
 		this._refreshList$.next(true);
@@ -36,12 +37,13 @@ export class WorkoutsService {
 	}
 
 	// GET a single workout
-	getWorkout(): Observable<any> {
+	getWorkout(): Observable<IWorkout> {
 		return toObservable(this.selectedWorkoutIdSnl).pipe(
 			filter((id: string | undefined) => !!id),
 			switchMap((id: string | undefined) => this.http.get<IWorkout>(this.workoutApi + '/' + id)),
 			switchMap(() => this.modifyWorkoutListSubj.asObservable()
 				.pipe(
+					filter((actionData: IWorkoutActions) => actionData.action !== 'create'),
 					switchMap((actionData: IWorkoutActions) => this.reduceUserDrivenActionsToObservabel(actionData))
 				)
 			),
@@ -50,9 +52,14 @@ export class WorkoutsService {
 		)
 	}
 
-	// POST a single workout
-	createWorkout(workout: any): Observable<IWorkout> {
-		return this.http.post<IWorkout>(this.workoutApi, workout)
+	createWorkout(): Observable<IWorkout> {
+		return this.modifyWorkoutListSubj.asObservable().pipe(
+			filter((actionData: IWorkoutActions) => actionData.action === 'create'),
+			tap((actionData: IWorkoutActions)=> console.log('tuksa sme ' + actionData.workout)),
+			switchMap((actionData: IWorkoutActions)=>this.http.post<IWorkout>(this.workoutApi, actionData.workout)),
+			tap(() => this.refreshList()),
+			shareReplay()
+		)
 	}
 
 	// Modify a workout
@@ -67,6 +74,8 @@ export class WorkoutsService {
 				return this.http.patch<IWorkout>(this.workoutApi + '/' + actionData.workout._id, actionData.workout);
 			case 'delete':
 				return this.http.delete<IWorkout>(this.workoutApi + '/' + actionData.workout._id);
+			case 'create':
+				return this.http.post<IWorkout>(this.workoutApi, actionData.workout);
 		}
 	}
 }

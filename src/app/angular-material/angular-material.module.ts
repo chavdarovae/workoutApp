@@ -22,7 +22,7 @@ const MaterialComponents = [
 	MatProgressBarModule,
 	MatIconModule,
 	ReactiveFormsModule,
-	FormsModule
+	FormsModule,
 ];
 
 @NgModule({

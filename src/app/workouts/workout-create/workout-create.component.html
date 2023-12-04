@@ -1,1 +1,55 @@
-<p>workout-create works!</p>
+<a [routerLink]="['/workouts']">
+	<button mat-raised-button color="primary">Back to Workout list</button>
+</a>
+<br>
+<hr>
+
+<form [formGroup]="workoutForm" class="form">
+	<mat-form-field class="form__input">
+		<mat-label>Title</mat-label>
+		<input matInput id="title" placeholder="Ex. Jumping-Jacks" type="text" formControlName="title">
+	</mat-form-field>
+
+	<mat-form-field class="form__input">
+		<mat-label>Repetitions</mat-label>
+		<input matInput id="Reps" type="number" formControlName="reps">
+	</mat-form-field>
+
+	<mat-form-field class="form__input">
+		<mat-label>Load</mat-label>
+		<input matInput id="load" type="number" formControlName="load">
+	</mat-form-field>
+
+	<mat-divider></mat-divider>
+	<br>
+
+	<div class="row row--sp-btw">
+		<button
+			mat-raised-button
+			color="primary"
+			type="button"
+			(click)="resetWorkoutForm()">
+			Clear
+		</button>
+
+		<button
+			mat-raised-button
+			color="accent"
+			type="button"
+			[disabled]="workoutForm.invalid"
+			(click)="submitWorkout()">
+			Create Workout
+		</button>
+	</div>
+</form>
+
+<hr>
+<br>
+
+@if (createdWorkoutSnl())
+{
+<div>The following workout has been created</div>
+<div>
+	{{createdWorkoutSnl() | json}}
+</div>
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { IWorkout } from './../interface/workout.interfaces';
 
 @Component({
   selector: 'app-workout-detail',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./workout-detail.component.scss']
 })
 export class WorkoutDetailComponent {
-
+	@Input() workout!: IWorkout;
+	@Output() likeWorkout: EventEmitter<IWorkout> =  new EventEmitter();
+	@Output() deleteWorkout: EventEmitter<IWorkout> =  new EventEmitter();
 }

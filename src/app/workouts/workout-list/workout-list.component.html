@@ -1,41 +1,28 @@
-<div class="row">
+
+<a [routerLink]="['/workouts/create']">
+	<button mat-raised-button color="primary">Add new Workout</button>
+</a>
+<br>
+<hr>
+<div class="row row--sp-around">
 
 	@for (workout of workoutList(); track workout._id)
 	{
-		<mat-card class="example-card">
-			<mat-card-header>
-				<mat-card-subtitle>{{ workout.title }}</mat-card-subtitle>
-				<mat-card-title>Agility</mat-card-title>
-			</mat-card-header>
-			<mat-card-content>
-				<p>Repetition: {{ workout.reps }}</p>
-				<p>Load: {{ workout.load }}</p>
-				<p>Likes: {{ workout.likes }}</p>
-				<mat-divider></mat-divider>
-			</mat-card-content>
-			<mat-card-actions class="row">
-				<button mat-raised-button color="warn" (click)="deleteWorkout(workout)">Delete</button>
-				<button mat-raised-button color="accent" (click)="likeWorkout(workout)">Like</button>
-			</mat-card-actions>
-		</mat-card>
+		<app-workout-detail [workout]="workout" (likeWorkout)="likeWorkout($event)" (deleteWorkout)="likeWorkout($event)"></app-workout-detail>
 	}
 	@empty
 	{
-		There were no items in the list.
+		<div>There were no items in the list.</div>
 	}
-
 </div>
 
 <hr>
 
 @if (selectedWorkout())
 {
-	<div>
-		{{selectedWorkout() | json}}
-	</div>
+	<div> Selected:  {{selectedWorkout() | json}}  </div>
 }
 @else
 {
-    <div>No workout selecteds</div>
+	<div>No workout selecteds</div>
 }
-
