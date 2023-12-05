@@ -19,7 +19,7 @@ jobs:
 
       - name: Install and build
         working-directory: ./frontend
-        run: npm install && npm run build && cp dist/frontend/index.html
+        run: npm install && npm run build:prod-github && cp dist/frontend/index.html
 
       - name: Deploy
         uses: chavdarovae/github-pages-deploy-action@4.1.1
