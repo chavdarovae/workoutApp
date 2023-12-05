@@ -63,5 +63,9 @@ jobs:
             #       body: ${{ steps.changelog.outputs.clean_changelog }}
 
             - name: Deploy
-              run: |
-                  npm run deploy
+              if: success()
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: dist/angular-github-actions
+                enable_jekyll: true
