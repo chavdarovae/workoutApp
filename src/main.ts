@@ -15,7 +15,7 @@ bootstrapApplication(AppComponent, {
 		importProvidersFrom(
 			CommonModule,
 			BrowserModule,
-			RouterModule.forRoot(APP_ROUTES),
+			RouterModule.forRoot(APP_ROUTES, { anchorScrolling: 'enabled', scrollPositionRestoration: 'disabled', onSameUrlNavigation: 'reload', useHash: true }),
 			HttpClientXsrfModule
 		),
 		provideAnimations(),
