@@ -8,9 +8,7 @@
     "build:prod": "ng build --configuration production --base-href https://chavdarovae.github.io/workoutApp/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:prod-github": "ng build --configuration production --base-href /workoutApp/",
-    "deploy": "ng deploy --base-href /workoutApp/",
-    "deploy:github": "ngh --dir dist/frontend"
+    "deploy": "ng deploy --base-href /workoutApp/"
   },
   "private": true,
   "dependencies": {
