@@ -8,14 +8,16 @@
 </div>
 <br>
 <hr>
-<div class="row row--sp-around">
+<div class="row row--sp-around row--wrap">
 
-	@for (workout of workoutList(); track workout._id)
-	{
-		<app-workout-detail [workout]="workout" (likeWorkout)="likeWorkout($event)" (deleteWorkout)="likeWorkout($event)"></app-workout-detail>
-	}
-	@empty
-	{
+	@for (workout of workoutList(); track workout._id) {
+		<app-workout-detail
+			class="mb-20"
+			[workout]="workout"
+			(likeWorkout)="likeWorkout($event)"
+			(deleteWorkout)="likeWorkout($event)">
+		</app-workout-detail>
+	} @empty {
 		<div>There were no items in the list.</div>
 	}
 </div>

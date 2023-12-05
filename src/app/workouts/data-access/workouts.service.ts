@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, filter, shareReplay, switchMap, tap } from 'rxjs';
 import { AlertService } from 'src/app/core/data-access/alert.service';
 import { Alert } from 'src/app/core/util/alert.model';
-import { environment } from 'src/environments/environment.dev';
+import { environment } from 'src/environments/environment';
 import { IWorkout, IWorkoutActions } from '../util/interface/workout.interfaces';
 
 

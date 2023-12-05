@@ -15,6 +15,10 @@ body {
 	display: flex;
 	flex-flow: row nowrap;
 
+	&--wrap {
+		flex-flow: row wrap;
+	}
+
 	&--sp-btw {
 		justify-content: space-between;
 	}
@@ -48,4 +52,8 @@ body {
 
 .ml-a {
 	margin-left: auto;
+}
+
+.mb-20 {
+	margin-bottom: 20px !important;
 }
