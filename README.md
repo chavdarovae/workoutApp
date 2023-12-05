@@ -1,6 +1,6 @@
 # workoutApp
 Application for workouts
-node.js version v18.17.1
+node.js version v18.17.1  or so 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
 ## Development server
