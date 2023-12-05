@@ -5,11 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href /workoutApp/",
+    "build:prod": "ng build --configuration production ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:prod-github": "ng build --configuration production --base-href /workoutApp/",
-    "deploy": "ng deploy",
+    "deploy": "ng deploy --base-href=/workoutApp/",
     "deploy:github": "ngh --dir dist/frontend"
   },
   "private": true,
