@@ -1,6 +1,9 @@
+name: GitHubPages Deploy
+
 on:
   push:
-    types: [created]
+    branches:
+      - "main"
 
 jobs:
   build:
@@ -9,17 +12,17 @@ jobs:
     strategy:
       matrix:
         node-version: [18.17.1]
-        
+
     steps:
       - name: checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Install and build
-      - working-directory: ./frontend
-      - run: npm install && npm run build && cp dist/frontend/index.html
+        working-directory: ./frontend
+        run: npm install && npm run build && cp dist/frontend/index.html
 
       - name: Deploy
-      - uses: chavdarovae/github-pages-deploy-action@4.1.1
-      - with: 
-        branch: gh-branches
-        folder: workoutApp/dist/frontend
+        uses: chavdarovae/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-branches
+          folder: workoutApp/dist/frontend
