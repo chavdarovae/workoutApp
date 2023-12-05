@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Signal, WritableSignal, inject, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, filter, shareReplay, switchMap, tap } from 'rxjs';
+import { AlertService } from 'src/app/core/data-access/alert.service';
+import { Alert } from 'src/app/core/util/alert.model';
 import { environment } from 'src/environments/environment.dev';
 import { IWorkout, IWorkoutActions } from '../util/interface/workout.interfaces';
 
@@ -13,6 +16,8 @@ export type WorkoutUserActions = 'delete' | 'modify' | 'create';
 })
 export class WorkoutsService {
 	private http = inject(HttpClient);
+	private alertSrvice = inject(AlertService);
+	private router = inject(Router);
 
 	workoutApi = environment.apiUrl + '/api/workouts';
 	_refreshList$: BehaviorSubject<any> = new BehaviorSubject(true);
@@ -55,9 +60,12 @@ export class WorkoutsService {
 	createWorkout(): Observable<IWorkout> {
 		return this.modifyWorkoutListSubj.asObservable().pipe(
 			filter((actionData: IWorkoutActions) => actionData.action === 'create'),
-			tap((actionData: IWorkoutActions)=> console.log('tuksa sme ' + actionData.workout)),
 			switchMap((actionData: IWorkoutActions)=>this.http.post<IWorkout>(this.workoutApi, actionData.workout)),
-			tap(() => this.refreshList()),
+			tap(() => {
+				this.refreshList();
+				this.alertSrvice.showAlert(new Alert('New workout has been created.', 'success'));
+				this.router.navigate(['/workouts']);
+			}),
 			shareReplay()
 		)
 	}

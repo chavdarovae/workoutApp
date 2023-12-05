@@ -1,3 +1,5 @@
-<div *ngFor="let alert of alertService.alerts()"  [class]="'alert ' + alert.type">
+<div *ngFor="let alert of alertService.alerts()"
+	[class]="'alert ' + alert.type">
 	{{alert.msg}}
+	<span class="ml-a" (click)="alertService.clearAlerts()">X</span>
 </div>

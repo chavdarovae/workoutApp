@@ -22,6 +22,14 @@ body {
 	&--sp-around {
 		justify-content: space-around;
 	}
+
+	&--r-algned {
+		justify-content: flex-end;
+	}
+
+	&--l-algned {
+		justify-content: flex-start;
+	}
 }
 
 
@@ -36,4 +44,8 @@ body {
 
 .warn {
 	background-color: $warn;
+}
+
+.ml-a {
+	margin-left: auto;
 }

@@ -5,10 +5,14 @@ import { IAlert } from '../util/general.interface';
 	providedIn: 'root'
 })
 export class AlertService {
-	private _alerts: WritableSignal<IAlert[]> = signal([{msg: 'pass auf!' , type: 'danger' }]);
+	private _alerts: WritableSignal<IAlert[]> = signal([]);
 	alerts = computed(() => this._alerts());
 
 	showAlert(newAlert: IAlert) {
-		// this._alerts.update(alerts => alerts.push(newAlert));
+		this._alerts.set([newAlert]);
+	}
+
+	clearAlerts() {
+		this._alerts.set([]);
 	}
 }
