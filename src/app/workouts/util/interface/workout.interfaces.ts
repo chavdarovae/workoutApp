@@ -11,4 +11,4 @@ export interface IWorkout {
 export interface IWorkoutActions {
 	workout: IWorkout,
 	action: WorkoutUserActions
-};
+}

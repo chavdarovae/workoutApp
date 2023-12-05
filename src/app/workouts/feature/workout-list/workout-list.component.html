@@ -24,11 +24,8 @@
 
 <hr>
 
-@if (selectedWorkout())
-{
+@if (selectedWorkout()) {
 	<div> Selected:  {{selectedWorkout() | json}}  </div>
-}
-@else
-{
+}  @else {
 	<div>No workout selecteds</div>
 }

@@ -12,7 +12,7 @@ export class AccountService {
 	_accounts$: BehaviorSubject<any> = new BehaviorSubject([]);
 	accounts$: Observable<IAccount[]> = this._accounts$.asObservable();
 
-	_refreshList$: BehaviorSubject<any> = new BehaviorSubject(true);
+	_refreshList$: BehaviorSubject<boolean> = new BehaviorSubject(true);
 
 	constructor(private http: HttpClient) {}
 

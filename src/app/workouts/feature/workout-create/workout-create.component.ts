@@ -30,7 +30,7 @@ export class WorkoutCreateComponent<Workout> {
 	});
 
 	submitWorkout() {
-		const {title, reps, load, likes} = this.workoutForm.value  as any as IWorkout;
+		const {title, reps, load, likes} = this.workoutForm.value as any as IWorkout;
 		const createObj = new Workout(title, reps, load, likes);
 		this.workoutsService.modifyWorkout(createObj, 'create');
 	}
