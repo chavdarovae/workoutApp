@@ -15,14 +15,14 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Install and build
         working-directory: ./frontend
         run: npm install && npm run build:prod-github && cp dist/frontend/index.html
 
       - name: Deploy
-        uses: actions/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-branches
-          folder: workoutApp/dist/frontend
+        run: npm run deploy

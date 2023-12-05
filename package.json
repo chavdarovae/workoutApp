@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:prod-github": "ng build --configuration production --base-href /workoutApp/",
-    "deploy": "ngh --dir dist/frontend"
+    "deploy": "ng deploy --base-href=/workoutApp/",
+    "deploy:git-hub": "ngh --dir dist/frontend"
   },
   "private": true,
   "dependencies": {
