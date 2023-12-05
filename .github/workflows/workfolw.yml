@@ -19,7 +19,7 @@ jobs:
 
       - name: Install and build
         working-directory: ./frontend
-        run: npm install && npm run build && cp dist/frontend/index.html
+        run: npm install --force && npm run build:prod
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
