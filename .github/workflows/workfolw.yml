@@ -22,7 +22,7 @@ jobs:
         run: npm install && npm run build:prod-github && cp dist/frontend/index.html
 
       - name: Deploy
-        uses: chavdarovae/github-pages-deploy-action@4.1.1
+        uses: actions/github-pages-deploy-action@4.1.1
         with:
           branch: gh-branches
           folder: workoutApp/dist/frontend
