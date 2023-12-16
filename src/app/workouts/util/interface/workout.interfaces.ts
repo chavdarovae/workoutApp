@@ -1,4 +1,3 @@
-import { WorkoutUserActions } from "../../data-access/workouts.service"
 
 export interface IWorkout {
 	title: string,
@@ -6,9 +5,4 @@ export interface IWorkout {
 	load: number,
 	likes: number,
 	_id: string
-}
-
-export interface IWorkoutActions {
-	workout: IWorkout,
-	action: WorkoutUserActions
 }

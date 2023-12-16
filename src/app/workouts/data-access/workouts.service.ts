@@ -6,10 +6,9 @@ import { BehaviorSubject, Observable, filter, shareReplay, switchMap, tap } from
 import { AlertService } from 'src/app/core/data-access/alert.service';
 import { Alert } from 'src/app/core/util/alert.model';
 import { environment } from 'src/environments/environment';
-import { IWorkout, IWorkoutActions } from '../util/interface/workout.interfaces';
+import { IWorkout } from '../util/interface/workout.interfaces';
 
-
-export type WorkoutUserActions = 'delete' | 'modify' | 'create';
+export type WorkoutUserAction = { type: 'delete' | 'modify' | 'create', workout?: IWorkout };
 
 @Injectable({
 	providedIn: 'root'
@@ -48,8 +47,8 @@ export class WorkoutsService {
 			switchMap((id: string | undefined) => this.http.get<IWorkout>(this.workoutApi + '/' + id)),
 			switchMap(() => this.modifyWorkoutListSubj.asObservable()
 				.pipe(
-					filter((actionData: IWorkoutActions) => actionData.action !== 'create'),
-					switchMap((actionData: IWorkoutActions) => this.reduceUserDrivenActionsToObservabel(actionData))
+					filter((actionData: WorkoutUserAction) => actionData.type !== 'create'),
+					switchMap((actionData: WorkoutUserAction) => this.userInteractionToObservable(actionData))
 				)
 			),
 			tap(() => this.refreshList()),
@@ -59,31 +58,39 @@ export class WorkoutsService {
 
 	createWorkout(): Observable<IWorkout> {
 		return this.modifyWorkoutListSubj.asObservable().pipe(
-			filter((actionData: IWorkoutActions) => actionData.action === 'create'),
-			switchMap((actionData: IWorkoutActions)=>this.http.post<IWorkout>(this.workoutApi, actionData.workout)),
-			tap(() => {
-				this.refreshList();
-				this.alertSrvice.showAlert(new Alert('New workout has been created.', 'success'));
-				this.router.navigate(['/workouts']);
-			}),
+			filter((actionData: WorkoutUserAction) => actionData.type === 'create'),
+			switchMap((actionData: WorkoutUserAction)=>this.http.post<IWorkout>(this.workoutApi, actionData.workout)),
 			shareReplay()
 		)
 	}
 
 	// Modify a workout
-	modifyWorkout(workout: IWorkout, action?: WorkoutUserActions): void {
-		this.selectedWorkoutIdSnl.set(workout._id);
-		this.modifyWorkoutListSubj.next({ workout, action });
+	modifyWorkout(action: WorkoutUserAction): void {
+		this.selectedWorkoutIdSnl.set(action.workout?._id);
+		this.modifyWorkoutListSubj.next({ workout: action.workout, type: action.type });
 	}
 
-	private reduceUserDrivenActionsToObservabel(actionData: IWorkoutActions): Observable<IWorkout> {
-		switch (actionData.action) {
+	private userInteractionToObservable(actionData: WorkoutUserAction): Observable<IWorkout> {
+		switch (actionData.type) {
 			case 'modify':
-				return this.http.patch<IWorkout>(this.workoutApi + '/' + actionData.workout._id, actionData.workout);
+				return this.http.patch<IWorkout>(this.workoutApi + '/' + actionData.workout?._id, actionData.workout).pipe(
+					tap(() => {
+						this.alertSrvice.showAlert(new Alert('The workout like has been registered', 'success'));
+					})
+				);
 			case 'delete':
-				return this.http.delete<IWorkout>(this.workoutApi + '/' + actionData.workout._id);
+				return this.http.delete<IWorkout>(this.workoutApi + '/' + actionData.workout?._id).pipe(
+					tap(() => {
+						this.alertSrvice.showAlert(new Alert('The selected workout has been deleted.', 'success'));
+					})
+				);
 			case 'create':
-				return this.http.post<IWorkout>(this.workoutApi, actionData.workout);
+				return this.http.post<IWorkout>(this.workoutApi, actionData.workout).pipe(
+					tap(() => {
+						this.alertSrvice.showAlert(new Alert('New workout has been created.', 'success'));
+						this.router.navigate(['/workouts']);
+					})
+				);
 		}
 	}
 }

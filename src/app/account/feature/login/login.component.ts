@@ -1,11 +1,12 @@
 import { NgIf } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AccountService } from '../../data-access/account.service';
+import { Router } from '@angular/router';
+import { AuthService } from './../../../core/data-access/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -14,23 +15,23 @@ import { AccountService } from '../../data-access/account.service';
     standalone: true,
     imports: [MatCardModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, NgIf, MatButtonModule]
 })
-export class LoginComponent {
+export class LoginComponent  implements OnInit {
+	authService = inject(AuthService);
+	router = inject(Router);
 	@Input() error!: string | null;
-	@Output() submitEM = new EventEmitter();
 
 	form: FormGroup = new FormGroup({
 		email: new FormControl(''),
 		password: new FormControl(''),
 	});
 
-	constructor(private accountService: AccountService) {}
-
-	submit() {
-		if (this.form.valid) {
-			this.submitEM.emit(this.form.value);
+	ngOnInit(): void {
+		if (this.authService.currUser().email) {
+			this.router.navigate(['/workouts']);
 		}
-
-		this.accountService.login(this.form.value).subscribe();
 	}
 
+	submit() {
+		this.authService.login(this.form.value);
+	}
 }

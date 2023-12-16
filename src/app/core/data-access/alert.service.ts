@@ -10,6 +10,7 @@ export class AlertService {
 
 	showAlert(newAlert: IAlert) {
 		this._alerts.set([newAlert]);
+		setTimeout(() => this.clearAlerts(), 900);
 	}
 
 	clearAlerts() {

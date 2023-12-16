@@ -1,0 +1,16 @@
+<mat-card  *ngIf="workout" class="example-card">
+	<mat-card-header>
+		<mat-card-subtitle>{{ workout.title }}</mat-card-subtitle>
+		<mat-card-title>Agility</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<p>Repetition: {{ workout.reps }}</p>
+		<p>Load: {{ workout.load }}</p>
+		<p>Likes: {{ workout.likes }}</p>
+		<mat-divider></mat-divider>
+	</mat-card-content>
+	<mat-card-actions class="row row--sp-btw">
+		<button mat-raised-button color="warn" (click)="deleteWorkout.emit(workout)">Delete</button>
+		<button mat-raised-button color="accent" (click)="likeWorkout.emit(workout)">Like</button>
+	</mat-card-actions>
+</mat-card>

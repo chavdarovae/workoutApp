@@ -1,7 +1,7 @@
 
 <br>
 <br>
-<div class="row row--r-algned">
+<div class="row row--r-algined">
 	<a [routerLink]="['/workouts/create']">
 		<button mat-raised-button color="primary">Add new Workout</button>
 	</a>
@@ -11,12 +11,12 @@
 <div class="row row--sp-around row--wrap">
 
 	@for (workout of workoutList(); track workout._id) {
-		<app-workout-detail
+		<app-workout-preview
 			class="mb-20"
 			[workout]="workout"
 			(likeWorkout)="likeWorkout($event)"
-			(deleteWorkout)="likeWorkout($event)">
-		</app-workout-detail>
+			(deleteWorkout)="deleteWorkout($event)">
+		</app-workout-preview>
 	} @empty {
 		<div>There were no items in the list.</div>
 	}

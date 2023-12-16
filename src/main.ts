@@ -8,6 +8,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app/app-routes';
 import { AppComponent } from './app/app.component';
+import { AuthService } from './app/core/data-access/auth.service';
 
 
 bootstrapApplication(AppComponent, {
@@ -16,10 +17,11 @@ bootstrapApplication(AppComponent, {
 			CommonModule,
 			BrowserModule,
 			RouterModule.forRoot(APP_ROUTES, { anchorScrolling: 'enabled', scrollPositionRestoration: 'disabled', onSameUrlNavigation: 'reload', useHash: true }),
-			HttpClientXsrfModule
+			HttpClientXsrfModule,
 		),
 		provideAnimations(),
-		provideHttpClient(withInterceptorsFromDi())
+		provideHttpClient(withInterceptorsFromDi()),
+		AuthService
 	]
 })
 	.catch(err => console.error(err));

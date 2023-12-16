@@ -14,9 +14,4 @@ export class AccountService {
 
 	_refreshList$: BehaviorSubject<boolean> = new BehaviorSubject(true);
 
-	constructor(private http: HttpClient) {}
-
-	login(loginData: {email: string, password: string}): Observable<any> {
-		return this.http.post<IAccount>(this.accountApi + '/login', loginData);
-	}
 }
