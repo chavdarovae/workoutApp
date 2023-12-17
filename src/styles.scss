@@ -98,8 +98,15 @@ a,
 }
 
 //components
+button {
+	.mdc-button__label {
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
 .btn {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 }
 
 // utils

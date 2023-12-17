@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { WorkoutsService } from '../../data-access/workouts.service';
@@ -16,7 +16,11 @@ import { IWorkout } from '../../util/interface/workout.interfaces';
 export class WorkoutListComponent implements OnInit {
 	private workoutsService = inject(WorkoutsService);
 	workoutList = this.workoutsService.workoutsSnl; // reference to signal not the value of the signal
-	selectedWorkout = this.workoutsService.selectedWorkoutSnl; // reference to signal not the value of the signal
+
+	totalWorkouts = computed(()=> this.workoutList().length);
+	totalLikes = computed(()=> this.workoutList()
+		.flatMap((w: IWorkout) => w.likes)
+		.reduce((a, acc) => acc + a, 0));
 
 	ngOnInit(): void {
 		this.workoutsService.refreshList();
