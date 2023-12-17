@@ -17,5 +17,9 @@ export const APP_ROUTES: Routes = [
 	{
 		path: 'workouts',
 		loadChildren: () => import('./workouts/util/workouts.routes').then(r => r.WORKOUT_ROUTES)
-	}
+	},
+	{
+		path: 'about',
+		loadComponent: () => import('./account/feature/about/about.component').then(c => c.AboutComponent)
+	},
 ];

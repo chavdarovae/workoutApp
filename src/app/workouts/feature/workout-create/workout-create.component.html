@@ -1,60 +1,59 @@
 <br>
 <br>
-<div class="row row--l-alined">
-	<a [routerLink]="['/workouts']">
-		<button mat-raised-button color="primary">Back to Workout list</button>
-	</a>
+<hr>
+<div class="col col--centered container">
+	<h2>Create new workout form</h2>
+	<form [formGroup]="workoutForm" class="form">
+		<mat-form-field class="form__input">
+			<mat-label>Title</mat-label>
+			<input matInput id="title" placeholder="Ex. Jumping-Jacks" type="text" formControlName="title">
+		</mat-form-field>
+
+		<mat-form-field class="form__input">
+			<mat-label>Repetitions</mat-label>
+			<input matInput id="Reps" type="number" formControlName="reps">
+		</mat-form-field>
+
+		<mat-form-field class="form__input">
+			<mat-label>Load</mat-label>
+			<input matInput id="load" type="number" formControlName="load">
+		</mat-form-field>
+
+		<mat-divider></mat-divider>
+		<br>
+
+		<div class="row row--sp-btw">
+			<a [routerLink]="['/workouts']">
+				<button
+					mat-raised-button
+					color="primary"
+					type="button"
+					(click)="resetWorkoutForm()">
+					Back to list
+				</button>
+			</a>
+
+			<button
+				mat-raised-button
+				color="primary"
+				type="button"
+				class="ml-a"
+				(click)="resetWorkoutForm()">
+				Clear
+			</button>
+
+			<button
+				mat-raised-button
+				color="accent"
+				type="button"
+				[disabled]="workoutForm.invalid"
+				(click)="submitWorkout()">
+				Create Workout
+			</button>
+		</div>
+	</form>
 </div>
 
-<br>
-<hr>
-
-<form [formGroup]="workoutForm" class="form">
-	<mat-form-field class="form__input">
-		<mat-label>Title</mat-label>
-		<input matInput id="title" placeholder="Ex. Jumping-Jacks" type="text" formControlName="title">
-	</mat-form-field>
-
-	<mat-form-field class="form__input">
-		<mat-label>Repetitions</mat-label>
-		<input matInput id="Reps" type="number" formControlName="reps">
-	</mat-form-field>
-
-	<mat-form-field class="form__input">
-		<mat-label>Load</mat-label>
-		<input matInput id="load" type="number" formControlName="load">
-	</mat-form-field>
-
-	<mat-divider></mat-divider>
-	<br>
-
-	<div class="row row--sp-btw">
-		<button
-			mat-raised-button
-			color="primary"
-			type="button"
-			(click)="resetWorkoutForm()">
-			Clear
-		</button>
-
-		<button
-			mat-raised-button
-			color="accent"
-			type="button"
-			[disabled]="workoutForm.invalid"
-			(click)="submitWorkout()">
-			Create Workout
-		</button>
-	</div>
-</form>
-
 <hr>
 <br>
-
-@if (createdWorkoutSnl())
-{
-<div>The following workout has been created</div>
-<div>
-	{{createdWorkoutSnl() | json}}
-</div>
-}
+<br>

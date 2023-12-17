@@ -28,6 +28,10 @@ body {
 		flex-flow: row wrap;
 	}
 
+	&--centered {
+		justify-content: center;
+	}
+
 	&--sp-btw {
 		justify-content: space-between;
 	}
@@ -45,9 +49,57 @@ body {
 	}
 }
 
+.col {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	gap: 20px;
+
+	&--wrap {
+		flex-flow: column wrap;
+	}
+
+	&--centered {
+		align-items: center;
+	}
+
+	&--sp-btw {
+		align-items: space-between;
+	}
+
+	&--sp-around {
+		align-items: space-around;
+	}
+
+	&--r-aligned {
+		align-items: flex-end;
+	}
+
+	&--l-aligned {
+		align-items: flex-start;
+	}
+}
+
 .container {
-	width: 90vw;
+	width: 70vw;
 	margin: 0 auto;
+}
+
+// elements
+a,
+.anchor-like {
+	cursor: pointer;
+	text-decoration: none;
+	color: $text-pri;
+
+	&:hover {
+		scale: 1.05;
+	}
+}
+
+//components
+.btn {
+	font-size: 1.5rem;
 }
 
 // utils
@@ -61,6 +113,10 @@ body {
 
 .warn {
 	background-color: $warn;
+}
+
+.m-a {
+	margin: auto;
 }
 
 .ml-a {

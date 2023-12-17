@@ -1,19 +1,20 @@
 
 <br>
 <br>
-<div class="row row--r-algined">
+<div class="row row--r-aligned">
 	<a [routerLink]="['/workouts/create']">
-		<button mat-raised-button color="primary">Add new Workout</button>
+		<button class="btn btn--symbol" mat-raised-button color="primary">+</button>
 	</a>
 </div>
 <br>
 <hr>
-<div class="row row--sp-around row--wrap">
+<div class="row row--sp-around row--wrap container">
 
 	@for (workout of workoutList(); track workout._id) {
 		<app-workout-preview
 			class="mb-20"
 			[workout]="workout"
+			(dblclick)="selectWorkout(workout)"
 			(likeWorkout)="likeWorkout($event)"
 			(deleteWorkout)="deleteWorkout($event)">
 		</app-workout-preview>
@@ -25,7 +26,7 @@
 <hr>
 
 @if (selectedWorkout()) {
-	<div> Selected:  {{selectedWorkout() | json}}  </div>
+	<div> Selected:  {{selectedWorkout()?.title}}  </div>
 }  @else {
 	<div>No workout selecteds</div>
 }

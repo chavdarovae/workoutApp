@@ -17,11 +17,9 @@ import { Workout } from '../../util/models/workout.models';
     standalone: true,
     imports: [RouterLink, MatButtonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatDividerModule, JsonPipe]
 })
-export class WorkoutCreateComponent<Workout> {
+export class WorkoutCreateComponent {
 	private formBuilder = inject(FormBuilder);
 	private workoutsService = inject(WorkoutsService);
-
-	createdWorkoutSnl = this.workoutsService.createdWorkoutSnl; // reference to signal not the value of the signal
 
 	workoutForm = this.formBuilder.group({
 		title: ['', [ Validators.required ]],
@@ -32,7 +30,7 @@ export class WorkoutCreateComponent<Workout> {
 	submitWorkout() {
 		const {title, reps, load, likes} = this.workoutForm.value as any as IWorkout;
 		const workout = new Workout(title, reps, load, likes);
-		this.workoutsService.modifyWorkout({type: 'create', workout});
+		this.workoutsService.createWorkoutSubject.next(workout);
 	}
 
 	resetWorkoutForm() {

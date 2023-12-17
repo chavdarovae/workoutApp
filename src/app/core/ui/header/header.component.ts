@@ -1,5 +1,6 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { AuthService } from '../../data-access/auth.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { AuthService } from '../../data-access/auth.service';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     standalone: true,
-	imports: [ NgIf, AsyncPipe ]
+	imports: [ NgIf, AsyncPipe, RouterModule ]
 })
 export class HeaderComponent {
 	authService = inject(AuthService);

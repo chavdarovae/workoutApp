@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { WorkoutsService } from '../../data-access/workouts.service';
@@ -13,18 +13,25 @@ import { IWorkout } from '../../util/interface/workout.interfaces';
     standalone: true,
     imports: [RouterLink, MatButtonModule, WorkoutPreviewComponent, JsonPipe]
 })
-export class WorkoutListComponent {
+export class WorkoutListComponent implements OnInit {
 	private workoutsService = inject(WorkoutsService);
 	workoutList = this.workoutsService.workoutsSnl; // reference to signal not the value of the signal
 	selectedWorkout = this.workoutsService.selectedWorkoutSnl; // reference to signal not the value of the signal
-	createdWorkoutSnl = this.workoutsService.createdWorkoutSnl; // reference to signal not the value of the signal
+
+	ngOnInit(): void {
+		this.workoutsService.refreshList();
+	}
 
 	deleteWorkout(workout: IWorkout) {
-		this.workoutsService.modifyWorkout({type: 'delete', workout});
+		this.workoutsService.modifyWorkoutSubject.next({type: 'delete', workout});
 	}
 
 	likeWorkout(workout: IWorkout) {
 		workout.likes = workout.likes ? workout.likes + 1 : 1;
-		this.workoutsService.modifyWorkout({type: 'modify', workout});
+		this.workoutsService.modifyWorkoutSubject.next({type: 'modify', workout});
+	}
+
+	selectWorkout(workout: IWorkout) {
+		this.workoutsService.modifyWorkoutSubject.next({type: 'select', workout});
 	}
 }

@@ -1,6 +1,6 @@
 <div *ngIf="authService.currUser().email" class="container menu row row--r-aligned">
 	<a routerLink="/about" routerLinkActive="router-link-active" mat-button>About</a>
 	<a routerLink="/workouts" routerLinkActive="router-link-active" mat-button>Workouts</a>
-	<span mat-button (click)="authService.logout()">Logout</span>
+	<span class="anchor-like" mat-button (click)="authService.logout()">Logout</span>
 </div>
 
