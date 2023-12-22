@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href https://chavdarovae.github.io/workoutApp/",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "deploy": "ng deploy --base-href /workoutApp/",
-    "lint": "ng lint"
+    "start": "nx serve",
+    "build": "nx build",
+    "build:prod": "nx build --configuration production --base-href https://chavdarovae.github.io/workoutApp/",
+    "watch": "nx build --watch --configuration development",
+    "test": "nx test",
+    "deploy": "nx deploy --base-href /workoutApp/",
+    "lint": "nx lint"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +29,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
+    "@angular-devkit/core": "~17.0.0",
+    "@angular-devkit/schematics": "~17.0.0",
     "@angular-eslint/builder": "17.1.1",
     "@angular-eslint/eslint-plugin": "17.1.1",
     "@angular-eslint/eslint-plugin-template": "17.1.1",
@@ -36,6 +38,9 @@
     "@angular-eslint/template-parser": "17.1.1",
     "@angular/cli": "~17.0.0",
     "@angular/compiler-cli": "^17.0.1",
+    "@nx/angular": "17.2.7",
+    "@nx/workspace": "17.2.7",
+    "@schematics/angular": "~17.0.0",
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
@@ -47,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "nx": "17.2.7",
     "typescript": "~5.2.2"
   }
 }
