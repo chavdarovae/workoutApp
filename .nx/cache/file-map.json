@@ -25,32 +25,45 @@
     "@angular-eslint/template-parser": "17.1.1",
     "@angular/cli": "~17.0.0",
     "@angular/compiler-cli": "^17.0.1",
+    "@angular/language-service": "^17.0.0",
     "@nx/angular": "17.2.7",
+    "@nx/jest": "17.2.7",
+    "@nx/js": "17.2.7",
     "@nx/workspace": "17.2.7",
     "@schematics/angular": "~17.0.0",
+    "@swc-node/register": "~1.6.7",
+    "@swc/core": "~1.3.85",
     "@types/jasmine": "~4.3.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "18.16.9",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
     "angular-cli-ghpages": "^0.6.2",
     "eslint": "^8.54.0",
     "jasmine-core": "~4.5.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "~13.1.4",
+    "jsonc-eslint-parser": "^2.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "nx": "17.2.7",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
     "typescript": "~5.2.2"
   },
-  "pathMappings": {},
+  "pathMappings": {
+    "workout": [
+      "modules/src/index.ts"
+    ]
+  },
   "nxJsonPlugins": [],
   "fileMap": {
-    "nonProjectFiles": [
-      {
-        "file": "src/styles/theme.scss",
-        "hash": "13723672739912553540"
-      }
-    ],
+    "nonProjectFiles": [],
     "projectFileMap": {
       "frontend": [
         {
@@ -67,11 +80,19 @@
         },
         {
           "file": ".gitignore",
-          "hash": "13044518069027839699"
+          "hash": "17090615579869685144"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "3395189204293871444"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "16117882425360397805"
         },
         {
           "file": ".vscode/extensions.json",
-          "hash": "8522221518508043725"
+          "hash": "3315561901865453261"
         },
         {
           "file": ".vscode/launch.json",
@@ -90,16 +111,30 @@
           "hash": "2560325435466092702"
         },
         {
+          "file": "jest.config.ts",
+          "hash": "17078405625718920242",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "9430166341120122740",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
           "file": "nx.json",
-          "hash": "5170766844602825207"
+          "hash": "9010502766653578993"
         },
         {
           "file": "package-lock.json",
-          "hash": "8107330976240239094"
+          "hash": "10546732807136538687"
         },
         {
           "file": "package.json",
-          "hash": "12310754911312204947",
+          "hash": "17501408777039156502",
           "deps": [
             "npm:@angular/animations",
             "npm:@angular/cdk",
@@ -124,21 +159,35 @@
             "npm:@angular-eslint/template-parser",
             "npm:@angular/cli",
             "npm:@angular/compiler-cli",
+            "npm:@angular/language-service",
             "npm:@nx/angular",
+            "npm:@nx/jest",
+            "npm:@nx/js",
             "npm:@nx/workspace",
             "npm:@schematics/angular",
+            "npm:@swc-node/register",
+            "npm:@swc/core",
             "npm:@types/jasmine",
+            "npm:@types/jest",
+            "npm:@types/node",
             "npm:@typescript-eslint/eslint-plugin",
             "npm:@typescript-eslint/parser",
             "npm:angular-cli-ghpages",
             "npm:eslint",
             "npm:jasmine-core",
+            "npm:jest",
+            "npm:jest-environment-jsdom",
+            "npm:jest-preset-angular",
+            "npm:jsonc-eslint-parser",
             "npm:karma",
             "npm:karma-chrome-launcher",
             "npm:karma-coverage",
             "npm:karma-jasmine",
             "npm:karma-jasmine-html-reporter",
             "npm:nx",
+            "npm:prettier",
+            "npm:ts-jest",
+            "npm:ts-node",
             "npm:typescript"
           ]
         },
@@ -588,19 +637,94 @@
         },
         {
           "file": "src/styles/theme.scss",
-          "hash": "4476868582137789255"
+          "hash": "13723672739912553540"
         },
         {
           "file": "tsconfig.app.json",
           "hash": "17337579397915052279"
         },
         {
+          "file": "tsconfig.base.json",
+          "hash": "784073937244697133"
+        },
+        {
           "file": "tsconfig.json",
-          "hash": "1047940026627514556"
+          "hash": "13669385779797275480"
         },
         {
           "file": "tsconfig.spec.json",
           "hash": "15575553540147145788"
+        }
+      ],
+      "workout": [
+        {
+          "file": "modules/.eslintrc.json",
+          "hash": "15023698258056677079"
+        },
+        {
+          "file": "modules/README.md",
+          "hash": "9880436431009213067"
+        },
+        {
+          "file": "modules/jest.config.ts",
+          "hash": "1048489631425735157"
+        },
+        {
+          "file": "modules/project.json",
+          "hash": "12175493260643384530"
+        },
+        {
+          "file": "modules/src/index.ts",
+          "hash": "8973847301414516774"
+        },
+        {
+          "file": "modules/src/lib/lib.routes.ts",
+          "hash": "426932875371289216",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "modules/src/lib/workout/workout.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "modules/src/lib/workout/workout.component.html",
+          "hash": "13366233654422645723"
+        },
+        {
+          "file": "modules/src/lib/workout/workout.component.spec.ts",
+          "hash": "13251689348539347444",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "modules/src/lib/workout/workout.component.ts",
+          "hash": "5784984342869873112",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "modules/src/test-setup.ts",
+          "hash": "6737875390675737258",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "modules/tsconfig.json",
+          "hash": "6719263631053337753"
+        },
+        {
+          "file": "modules/tsconfig.lib.json",
+          "hash": "374194897492563858"
+        },
+        {
+          "file": "modules/tsconfig.spec.json",
+          "hash": "3914356675667925507"
         }
       ]
     }
