@@ -9,7 +9,8 @@
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
     "deploy": "nx deploy --base-href /workoutApp/",
-    "lint": "nx lint"
+    "lint": "nx lint",
+    "graph": "nx graph"
   },
   "private": true,
   "dependencies": {
