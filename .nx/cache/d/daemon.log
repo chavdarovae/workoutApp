@@ -262,3 +262,63 @@
 [NX Daemon Server] - 2023-12-27T13:55:22.326Z - [REQUEST]: 
 [NX Daemon Server] - 2023-12-27T13:55:22.327Z - [REQUEST]: proba.component.css,proba.component.html,proba.component.spec.ts,proba.component.ts
 [NX Daemon Server] - 2023-12-27T13:55:22.372Z - Time taken for 'hash changed files from watcher' 0.5355799999670126ms
+[NX Daemon Server] - 2023-12-27T13:59:33.271Z - [WATCHER]: package.json was created or restored
+[NX Daemon Server] - 2023-12-27T13:59:33.272Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T13:59:33.374Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-27T13:59:33.374Z - [REQUEST]: package.json
+[NX Daemon Server] - 2023-12-27T13:59:33.374Z - [REQUEST]: 
+Error: InvalidSymbol in /Users/emiliyachavdarova/Personal/nodeApp/frontend/package.json at 2:1
+  1 | {
+> 2 | <<<<<<< HEAD
+    | ^^^^^^^
+  3 | 	"name": "frontend",
+  4 | 	"version": "0.0.0",
+  5 | 	"scripts": {
+
+    at parseJson (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/utils/json.js:25:15)
+    at readJsonFile (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/utils/fileutils.js:22:37)
+    at createProjectFromPackageJsonNextToProjectJson (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json.js:32:58)
+    at exports.CreatePackageJsonProjectsNextToProjectJson.createNodes (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json.js:14:29)
+    at buildProjectsConfigurationsFromProjectPathsAndPlugins (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:125:29)
+    at createProjectConfigurations (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:156)
+    at _retrieveProjectConfigurations (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:61:12)
+    at retrieveProjectConfigurations (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:46:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+Unable to create nodes for package-lock.json using plugin nx-js-graph-plugin. 
+
+	 Inner Error: Error: InvalidSymbol in /Users/emiliyachavdarova/Personal/nodeApp/frontend/package.json at 2:1
+  1 | {
+> 2 | <<<<<<< HEAD
+    | ^^^^^^^
+  3 | 	"name": "frontend",
+  4 | 	"version": "0.0.0",
+  5 | 	"scripts": {
+
+    at parseJson (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/utils/json.js:25:15)
+    at readJsonFile (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/utils/fileutils.js:22:37)
+    at jsPluginConfig (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/plugins/js/utils/config.js:32:54)
+    at exports.createNodes (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/plugins/js/index.js:23:58)
+    at buildProjectsConfigurationsFromProjectPathsAndPlugins (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:125:29)
+    at createProjectConfigurations (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:156)
+    at _retrieveProjectConfigurations (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:61:12)
+    at retrieveProjectConfigurations (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:46:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+[NX Daemon Server] - 2023-12-27T13:59:33.387Z - Time taken for 'hash changed files from watcher' 0.2001219999510795ms
+[NX Daemon Server] - 2023-12-27T14:00:34.078Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T14:00:34.595Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T14:00:34.695Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T14:00:38.588Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2023-12-27T14:00:38.588Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T14:00:38.789Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-27T14:00:38.789Z - [REQUEST]: package.json
+[NX Daemon Server] - 2023-12-27T14:00:38.789Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-27T14:00:38.842Z - Time taken for 'hash changed files from watcher' 0.19735999999102205ms
+[NX Daemon Server] - 2023-12-27T14:00:43.259Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T14:00:43.345Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T14:01:36.845Z - [WATCHER]: .gitignore was modified
+[NX Daemon Server] - 2023-12-27T14:01:36.845Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-27T14:01:36.847Z - [WATCHER]: Stopping the watcher for /Users/emiliyachavdarova/Personal/nodeApp/frontend (sources)
+[NX Daemon Server] - 2023-12-27T14:01:36.848Z - [WATCHER]: Stopping the watcher for /Users/emiliyachavdarova/Personal/nodeApp/frontend (outputs)
+[NX Daemon Server] - 2023-12-27T14:01:36.848Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
