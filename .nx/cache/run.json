@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx serve",
-    "startTime": "2023-12-22T21:26:45.709Z",
-    "endTime": "2023-12-22T21:53:38.982Z",
+    "command": "nx serve secondApp",
+    "startTime": "2023-12-28T14:56:14.879Z",
+    "endTime": "2023-12-28T15:04:16.228Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "frontend:serve:dev",
+      "taskId": "secondApp:serve:development",
       "target": "serve",
-      "projectName": "frontend",
-      "hash": "15955457739348795528",
-      "startTime": "2023-12-22T21:26:45.714Z",
-      "endTime": "2023-12-22T21:53:38.981Z",
+      "projectName": "secondApp",
+      "hash": "3751148779907508682",
+      "startTime": "2023-12-28T14:56:14.885Z",
+      "endTime": "2023-12-28T15:04:16.227Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

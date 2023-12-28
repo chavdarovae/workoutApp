@@ -2,10 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, Signal, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
+import { environment } from 'apps/firstApp/src/environments/environment.dev';
 import { BehaviorSubject, Observable, Subject, shareReplay, switchMap, tap } from 'rxjs';
-import { AlertService } from 'src/app/core/data-access/alert.service';
-import { Alert } from 'src/app/core/util/alert.model';
-import { environment } from 'src/environments/environment';
+import { AlertService } from '../../core/data-access/alert.service';
+import { Alert } from '../../core/util/alert.model';
 import { IWorkout } from '../util/interface/workout.interfaces';
 
 export type WorkoutUserAction = { type: 'delete' | 'modify' | 'select', workout?: IWorkout };

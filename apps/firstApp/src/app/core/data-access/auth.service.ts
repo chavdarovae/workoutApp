@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, WritableSignal, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'apps/firstApp/src/environments/environment';
 import { Subject, first, map, switchMap, tap } from 'rxjs';
-import { IAccount } from 'src/app/account/util/interface/account.interfaces';
-import { environment } from 'src/environments/environment';
+import { IAccount } from '../../account/util/interface/account.interfaces';
 import { ANONYMOS_USER } from '../constants/general.constants';
 
 export type AuthUserAction = { type: 'login' | 'logout', data?: IAccount };

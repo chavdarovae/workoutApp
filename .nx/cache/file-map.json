@@ -25,21 +25,39 @@
     "@angular-eslint/template-parser": "17.1.1",
     "@angular/cli": "~17.0.0",
     "@angular/compiler-cli": "^17.0.1",
+    "@angular/language-service": "^17.0.0",
     "@nx/angular": "17.2.7",
+    "@nx/cypress": "17.2.7",
+    "@nx/jest": "17.2.7",
+    "@nx/js": "17.2.7",
+    "@nx/web": "17.2.7",
     "@nx/workspace": "17.2.7",
     "@schematics/angular": "~17.0.0",
+    "@swc-node/register": "~1.6.7",
+    "@swc/core": "~1.3.85",
     "@types/jasmine": "~4.3.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "18.16.9",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
     "angular-cli-ghpages": "^0.6.2",
+    "cypress": "^13.0.0",
     "eslint": "^8.54.0",
+    "eslint-plugin-cypress": "^2.13.4",
     "jasmine-core": "~4.5.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "~13.1.4",
+    "jsonc-eslint-parser": "^2.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "nx": "17.2.7",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
     "typescript": "~5.2.2"
   },
   "pathMappings": {
@@ -49,150 +67,179 @@
   },
   "nxJsonPlugins": [],
   "fileMap": {
-    "nonProjectFiles": [],
+    "nonProjectFiles": [
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "3315561901865453261"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "4815948323043747099"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "apps/workout/src/index.html",
+        "hash": "17579412099930716879"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6823307792501081625"
+      },
+      {
+        "file": "README.md",
+        "hash": "2560325435466092702"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "13669385779797275480"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "15598910314814648805"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16535448144383645660"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "12462682381044934236"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "9023502842078679382"
+      },
+      {
+        "file": ".github/workflows/workfolw.yml",
+        "hash": "4250635425585814806"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "17337579397915052279"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "17078405625718920242"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11933293496705268176"
+      },
+      {
+        "file": "package.json",
+        "hash": "14455552174834457080"
+      },
+      {
+        "file": "apps/workout/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "784073937244697133"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16117882425360397805"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      }
+    ],
     "projectFileMap": {
-      "frontend": [
+      "firstApp-e2e": [
         {
-          "file": ".editorconfig",
-          "hash": "11933293496705268176"
+          "file": "apps/firstApp-e2e/.eslintrc.json",
+          "hash": "6576998403801642250"
         },
         {
-          "file": ".eslintrc.json",
-          "hash": "12462682381044934236"
-        },
-        {
-          "file": ".github/workflows/workfolw.yml",
-          "hash": "4250635425585814806"
-        },
-        {
-          "file": ".gitignore",
-          "hash": "6823307792501081625"
-        },
-        {
-          "file": ".prettierignore",
-          "hash": "3395189204293871444"
-        },
-        {
-          "file": ".prettierrc",
-          "hash": "16117882425360397805"
-        },
-        {
-          "file": ".vscode/extensions.json",
-          "hash": "3315561901865453261"
-        },
-        {
-          "file": ".vscode/launch.json",
-          "hash": "4815948323043747099"
-        },
-        {
-          "file": ".vscode/tasks.json",
-          "hash": "5336636969995539451"
-        },
-        {
-          "file": "LICENSE",
-          "hash": "15598910314814648805"
-        },
-        {
-          "file": "README.md",
-          "hash": "2560325435466092702"
-        },
-        {
-          "file": "jest.config.ts",
-          "hash": "17078405625718920242",
+          "file": "apps/firstApp-e2e/cypress.config.ts",
+          "hash": "17985982090433393030",
           "deps": [
-            "npm:@nx/jest"
+            "npm:@nx/cypress",
+            "npm:cypress"
           ]
         },
         {
-          "file": "jest.preset.js",
-          "hash": "9430166341120122740",
-          "deps": [
-            "npm:@nx/jest"
-          ]
+          "file": "apps/firstApp-e2e/project.json",
+          "hash": "60059413949384889"
         },
         {
-          "file": "nx.json",
-          "hash": "9010502766653578993"
+          "file": "apps/firstApp-e2e/src/e2e/app.cy.ts",
+          "hash": "13601925637191447141"
         },
         {
-          "file": "package-lock.json",
-          "hash": "10546732807136538687"
+          "file": "apps/firstApp-e2e/src/fixtures/example.json",
+          "hash": "6950778556131045369"
         },
         {
-          "file": "package.json",
-          "hash": "10587406895485077213",
-          "deps": [
-            "npm:@angular/animations",
-            "npm:@angular/cdk",
-            "npm:@angular/common",
-            "npm:@angular/compiler",
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/material",
-            "npm:@angular/platform-browser",
-            "npm:@angular/platform-browser-dynamic",
-            "npm:@angular/router",
-            "npm:rxjs",
-            "npm:tslib",
-            "npm:zone.js",
-            "npm:@angular-devkit/build-angular",
-            "npm:@angular-devkit/core",
-            "npm:@angular-devkit/schematics",
-            "npm:@angular-eslint/builder",
-            "npm:@angular-eslint/eslint-plugin",
-            "npm:@angular-eslint/eslint-plugin-template",
-            "npm:@angular-eslint/schematics",
-            "npm:@angular-eslint/template-parser",
-            "npm:@angular/cli",
-            "npm:@angular/compiler-cli",
-            "npm:@nx/angular",
-            "npm:@nx/workspace",
-            "npm:@schematics/angular",
-            "npm:@types/jasmine",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:angular-cli-ghpages",
-            "npm:eslint",
-            "npm:jasmine-core",
-            "npm:karma",
-            "npm:karma-chrome-launcher",
-            "npm:karma-coverage",
-            "npm:karma-jasmine",
-            "npm:karma-jasmine-html-reporter",
-            "npm:nx",
-            "npm:typescript"
-          ]
+          "file": "apps/firstApp-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
         },
         {
-          "file": "project.json",
-          "hash": "744518421765736833"
+          "file": "apps/firstApp-e2e/src/support/commands.ts",
+          "hash": "7702314073611385872"
         },
         {
-          "file": "src/app/account/data-access/account.service.spec.ts",
+          "file": "apps/firstApp-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/firstApp-e2e/tsconfig.json",
+          "hash": "4227521066891220640"
+        }
+      ],
+      "firstApp": [
+        {
+          "file": "apps/firstApp/.eslintrc.json",
+          "hash": "9640036155031892217"
+        },
+        {
+          "file": "apps/firstApp/jest.config.ts",
+          "hash": "4406757892971021452"
+        },
+        {
+          "file": "apps/firstApp/project.json",
+          "hash": "2656980975006002100"
+        },
+        {
+          "file": "apps/firstApp/src/app/account/data-access/account.service.spec.ts",
           "hash": "14937704345515631083",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/account/data-access/account.service.ts",
+          "file": "apps/firstApp/src/app/account/data-access/account.service.ts",
           "hash": "4477057063640435596",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/core",
-            "npm:rxjs"
+            "npm:rxjs",
+            "npm:src/environments/environment.dev"
           ]
         },
         {
-          "file": "src/app/account/feature/about/about.component.html",
+          "file": "apps/firstApp/src/app/account/feature/about/about.component.html",
           "hash": "12820049559417439681"
         },
         {
-          "file": "src/app/account/feature/about/about.component.scss",
+          "file": "apps/firstApp/src/app/account/feature/about/about.component.scss",
           "hash": "13027103444035360129"
         },
         {
-          "file": "src/app/account/feature/about/about.component.ts",
+          "file": "apps/firstApp/src/app/account/feature/about/about.component.ts",
           "hash": "3133641446132129517",
           "deps": [
             "npm:@angular/common",
@@ -200,22 +247,22 @@
           ]
         },
         {
-          "file": "src/app/account/feature/login/login.component.html",
+          "file": "apps/firstApp/src/app/account/feature/login/login.component.html",
           "hash": "7871923800524572720"
         },
         {
-          "file": "src/app/account/feature/login/login.component.scss",
+          "file": "apps/firstApp/src/app/account/feature/login/login.component.scss",
           "hash": "18141006817524247149"
         },
         {
-          "file": "src/app/account/feature/login/login.component.spec.ts",
+          "file": "apps/firstApp/src/app/account/feature/login/login.component.spec.ts",
           "hash": "15420428956365976928",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/account/feature/login/login.component.ts",
+          "file": "apps/firstApp/src/app/account/feature/login/login.component.ts",
           "hash": "16790978397747784758",
           "deps": [
             "npm:@angular/common",
@@ -226,22 +273,22 @@
           ]
         },
         {
-          "file": "src/app/account/feature/user-detail/user-detail.component.html",
+          "file": "apps/firstApp/src/app/account/feature/user-detail/user-detail.component.html",
           "hash": "7176442019031297938"
         },
         {
-          "file": "src/app/account/feature/user-detail/user-detail.component.scss",
+          "file": "apps/firstApp/src/app/account/feature/user-detail/user-detail.component.scss",
           "hash": "3244421341483603138"
         },
         {
-          "file": "src/app/account/feature/user-detail/user-detail.component.spec.ts",
+          "file": "apps/firstApp/src/app/account/feature/user-detail/user-detail.component.spec.ts",
           "hash": "2929758209469414511",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/account/feature/user-detail/user-detail.component.ts",
+          "file": "apps/firstApp/src/app/account/feature/user-detail/user-detail.component.ts",
           "hash": "2860450846114957339",
           "deps": [
             "npm:@angular/core",
@@ -249,22 +296,22 @@
           ]
         },
         {
-          "file": "src/app/account/feature/user-list/user-list.component.html",
+          "file": "apps/firstApp/src/app/account/feature/user-list/user-list.component.html",
           "hash": "7251235433944820971"
         },
         {
-          "file": "src/app/account/feature/user-list/user-list.component.scss",
+          "file": "apps/firstApp/src/app/account/feature/user-list/user-list.component.scss",
           "hash": "3244421341483603138"
         },
         {
-          "file": "src/app/account/feature/user-list/user-list.component.spec.ts",
+          "file": "apps/firstApp/src/app/account/feature/user-list/user-list.component.spec.ts",
           "hash": "6649351210486759812",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/account/feature/user-list/user-list.component.ts",
+          "file": "apps/firstApp/src/app/account/feature/user-list/user-list.component.ts",
           "hash": "565403391243108903",
           "deps": [
             "npm:@angular/core",
@@ -272,30 +319,30 @@
           ]
         },
         {
-          "file": "src/app/account/util/account.routes.ts",
+          "file": "apps/firstApp/src/app/account/util/account.routes.ts",
           "hash": "14849277679535087315",
           "deps": [
             "npm:@angular/router"
           ]
         },
         {
-          "file": "src/app/account/util/interface/account.interfaces.ts",
+          "file": "apps/firstApp/src/app/account/util/interface/account.interfaces.ts",
           "hash": "11927123767995370471"
         },
         {
-          "file": "src/app/account/util/models/account.models.ts",
+          "file": "apps/firstApp/src/app/account/util/models/account.models.ts",
           "hash": "2961857588293330310"
         },
         {
-          "file": "src/app/app.component.html",
+          "file": "apps/firstApp/src/app/app.component.html",
           "hash": "17923107795949190145"
         },
         {
-          "file": "src/app/app.component.scss",
+          "file": "apps/firstApp/src/app/app.component.scss",
           "hash": "15566971083614111392"
         },
         {
-          "file": "src/app/app.component.spec.ts",
+          "file": "apps/firstApp/src/app/app.component.spec.ts",
           "hash": "10867209789052272807",
           "deps": [
             "npm:@angular/core",
@@ -303,41 +350,41 @@
           ]
         },
         {
-          "file": "src/app/app.component.ts",
-          "hash": "10701724352708825210",
+          "file": "apps/firstApp/src/app/app.component.ts",
+          "hash": "14778868750080471402",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router"
           ]
         },
         {
-          "file": "src/app/app.routes.ts",
+          "file": "apps/firstApp/src/app/app.routes.ts",
           "hash": "10744890185201788528",
           "deps": [
             "npm:@angular/router"
           ]
         },
         {
-          "file": "src/app/core/constants/general.constants.ts",
-          "hash": "148519692809796617"
+          "file": "apps/firstApp/src/app/core/constants/general.constants.ts",
+          "hash": "2872755082025715600"
         },
         {
-          "file": "src/app/core/data-access/alert.service.spec.ts",
+          "file": "apps/firstApp/src/app/core/data-access/alert.service.spec.ts",
           "hash": "13100053292442603514",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/core/data-access/alert.service.ts",
+          "file": "apps/firstApp/src/app/core/data-access/alert.service.ts",
           "hash": "4953000520416400756",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/core/data-access/auth.service.ts",
-          "hash": "3454382311103850689",
+          "file": "apps/firstApp/src/app/core/data-access/auth.service.ts",
+          "hash": "9759893399233389069",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/core",
@@ -346,22 +393,22 @@
           ]
         },
         {
-          "file": "src/app/core/ui/alert/alert.component.html",
+          "file": "apps/firstApp/src/app/core/ui/alert/alert.component.html",
           "hash": "15072966430886393959"
         },
         {
-          "file": "src/app/core/ui/alert/alert.component.scss",
+          "file": "apps/firstApp/src/app/core/ui/alert/alert.component.scss",
           "hash": "14662882340513487188"
         },
         {
-          "file": "src/app/core/ui/alert/alert.component.spec.ts",
+          "file": "apps/firstApp/src/app/core/ui/alert/alert.component.spec.ts",
           "hash": "7563050826823415027",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/core/ui/alert/alert.component.ts",
+          "file": "apps/firstApp/src/app/core/ui/alert/alert.component.ts",
           "hash": "3479619420380564258",
           "deps": [
             "npm:@angular/common",
@@ -369,44 +416,44 @@
           ]
         },
         {
-          "file": "src/app/core/ui/footer/footer.component.html",
+          "file": "apps/firstApp/src/app/core/ui/footer/footer.component.html",
           "hash": "4602750922183344038"
         },
         {
-          "file": "src/app/core/ui/footer/footer.component.scss",
+          "file": "apps/firstApp/src/app/core/ui/footer/footer.component.scss",
           "hash": "3244421341483603138"
         },
         {
-          "file": "src/app/core/ui/footer/footer.component.spec.ts",
+          "file": "apps/firstApp/src/app/core/ui/footer/footer.component.spec.ts",
           "hash": "16898459265884948606",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/core/ui/footer/footer.component.ts",
+          "file": "apps/firstApp/src/app/core/ui/footer/footer.component.ts",
           "hash": "11913841510478200428",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/core/ui/header/header.component.html",
+          "file": "apps/firstApp/src/app/core/ui/header/header.component.html",
           "hash": "7376084862549917765"
         },
         {
-          "file": "src/app/core/ui/header/header.component.scss",
+          "file": "apps/firstApp/src/app/core/ui/header/header.component.scss",
           "hash": "848845492474761215"
         },
         {
-          "file": "src/app/core/ui/header/header.component.spec.ts",
+          "file": "apps/firstApp/src/app/core/ui/header/header.component.spec.ts",
           "hash": "8466258547967989846",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/core/ui/header/header.component.ts",
+          "file": "apps/firstApp/src/app/core/ui/header/header.component.ts",
           "hash": "15244368496140136964",
           "deps": [
             "npm:@angular/common",
@@ -415,23 +462,23 @@
           ]
         },
         {
-          "file": "src/app/core/util/alert.model.ts",
+          "file": "apps/firstApp/src/app/core/util/alert.model.ts",
           "hash": "2577101632876294290"
         },
         {
-          "file": "src/app/core/util/general.interface.ts",
+          "file": "apps/firstApp/src/app/core/util/general.interface.ts",
           "hash": "15921176019057878861"
         },
         {
-          "file": "src/app/workouts/data-access/workouts.service.spec.ts",
+          "file": "apps/firstApp/src/app/workouts/data-access/workouts.service.spec.ts",
           "hash": "14166262787252543753",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/workouts/data-access/workouts.service.ts",
-          "hash": "7273864027419346007",
+          "file": "apps/firstApp/src/app/workouts/data-access/workouts.service.ts",
+          "hash": "10112634628795372952",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/core",
@@ -440,22 +487,22 @@
           ]
         },
         {
-          "file": "src/app/workouts/feature/workout-create/workout-create.component.html",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.html",
           "hash": "13965452575482062394"
         },
         {
-          "file": "src/app/workouts/feature/workout-create/workout-create.component.scss",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.scss",
           "hash": "9993950643360197316"
         },
         {
-          "file": "src/app/workouts/feature/workout-create/workout-create.component.spec.ts",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.spec.ts",
           "hash": "15251676109705244173",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/workouts/feature/workout-create/workout-create.component.ts",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.ts",
           "hash": "4313487284066166569",
           "deps": [
             "npm:@angular/common",
@@ -466,22 +513,22 @@
           ]
         },
         {
-          "file": "src/app/workouts/feature/workout-detail/workout-detail.component.html",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.html",
           "hash": "13261058944814693330"
         },
         {
-          "file": "src/app/workouts/feature/workout-detail/workout-detail.component.scss",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.scss",
           "hash": "8905080382037398509"
         },
         {
-          "file": "src/app/workouts/feature/workout-detail/workout-detail.component.spec.ts",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.spec.ts",
           "hash": "5667568956567529618",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/workouts/feature/workout-detail/workout-detail.component.ts",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.ts",
           "hash": "7280913881944809670",
           "deps": [
             "npm:@angular/common",
@@ -490,22 +537,22 @@
           ]
         },
         {
-          "file": "src/app/workouts/feature/workout-list/workout-list.component.html",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.html",
           "hash": "292665540685399302"
         },
         {
-          "file": "src/app/workouts/feature/workout-list/workout-list.component.scss",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.scss",
           "hash": "4055606894390288348"
         },
         {
-          "file": "src/app/workouts/feature/workout-list/workout-list.component.spec.ts",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.spec.ts",
           "hash": "8464615097347761144",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/workouts/feature/workout-list/workout-list.component.ts",
+          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.ts",
           "hash": "18124639120793733905",
           "deps": [
             "npm:@angular/common",
@@ -515,22 +562,22 @@
           ]
         },
         {
-          "file": "src/app/workouts/ui/workout-preview/workout-preview.component.html",
+          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.html",
           "hash": "13261058944814693330"
         },
         {
-          "file": "src/app/workouts/ui/workout-preview/workout-preview.component.scss",
+          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.scss",
           "hash": "8905080382037398509"
         },
         {
-          "file": "src/app/workouts/ui/workout-preview/workout-preview.component.spec.ts",
+          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.spec.ts",
           "hash": "6222217536015241541",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "src/app/workouts/ui/workout-preview/workout-preview.component.ts",
+          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.ts",
           "hash": "8885486854381917654",
           "deps": [
             "npm:@angular/common",
@@ -539,50 +586,50 @@
           ]
         },
         {
-          "file": "src/app/workouts/util/interface/workout.interfaces.ts",
+          "file": "apps/firstApp/src/app/workouts/util/interface/workout.interfaces.ts",
           "hash": "15080107940185567383"
         },
         {
-          "file": "src/app/workouts/util/models/workout.models.ts",
+          "file": "apps/firstApp/src/app/workouts/util/models/workout.models.ts",
           "hash": "10248825808123082139"
         },
         {
-          "file": "src/app/workouts/util/workouts.routes.ts",
+          "file": "apps/firstApp/src/app/workouts/util/workouts.routes.ts",
           "hash": "17570521872914779717",
           "deps": [
             "npm:@angular/router"
           ]
         },
         {
-          "file": "src/assets/.gitkeep",
+          "file": "apps/firstApp/src/assets/.gitkeep",
           "hash": "3244421341483603138"
         },
         {
-          "file": "src/assets/img/logo.png",
+          "file": "apps/firstApp/src/assets/img/logo.png",
           "hash": "12888927801500130956"
         },
         {
-          "file": "src/environments/environment.dev.ts",
+          "file": "apps/firstApp/src/environments/environment.dev.ts",
           "hash": "9282335997922861573"
         },
         {
-          "file": "src/environments/environment.prod.ts",
+          "file": "apps/firstApp/src/environments/environment.prod.ts",
           "hash": "1098207640682070447"
         },
         {
-          "file": "src/environments/environment.ts",
+          "file": "apps/firstApp/src/environments/environment.ts",
           "hash": "12582071146496621616"
         },
         {
-          "file": "src/favicon.ico",
+          "file": "apps/firstApp/src/favicon.ico",
           "hash": "1817255397591526382"
         },
         {
-          "file": "src/index.html",
-          "hash": "10896301196128133237"
+          "file": "apps/firstApp/src/index.html",
+          "hash": "12144769463000852871"
         },
         {
-          "file": "src/main.ts",
+          "file": "apps/firstApp/src/main.ts",
           "hash": "8618456547137728980",
           "deps": [
             "npm:@angular/common",
@@ -592,40 +639,146 @@
           ]
         },
         {
-          "file": "src/proxy.conf.json",
+          "file": "apps/firstApp/src/proxy.conf.json",
           "hash": "84559467022881015"
         },
         {
-          "file": "src/styles.scss",
+          "file": "apps/firstApp/src/styles.scss",
           "hash": "7447133920211595281"
         },
         {
-          "file": "src/styles/_variables.scss",
+          "file": "apps/firstApp/src/styles/_variables.scss",
           "hash": "17890740222080652875"
         },
         {
-          "file": "src/styles/nomalize.scss",
+          "file": "apps/firstApp/src/styles/nomalize.scss",
           "hash": "2241966981922702604"
         },
         {
-          "file": "src/styles/theme.scss",
+          "file": "apps/firstApp/src/styles/theme.scss",
           "hash": "13723672739912553540"
         },
         {
-          "file": "tsconfig.app.json",
-          "hash": "17337579397915052279"
+          "file": "apps/firstApp/src/test-setup.ts",
+          "hash": "6737875390675737258",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
         },
         {
-          "file": "tsconfig.base.json",
-          "hash": "784073937244697133"
+          "file": "apps/firstApp/tsconfig.app.json",
+          "hash": "11795995879911801785"
         },
         {
-          "file": "tsconfig.json",
-          "hash": "13669385779797275480"
+          "file": "apps/firstApp/tsconfig.editor.json",
+          "hash": "5432951212168770151"
         },
         {
-          "file": "tsconfig.spec.json",
-          "hash": "15575553540147145788"
+          "file": "apps/firstApp/tsconfig.json",
+          "hash": "16464992189847561130"
+        },
+        {
+          "file": "apps/firstApp/tsconfig.spec.json",
+          "hash": "3419358724137916114"
+        }
+      ],
+      "secondApp": [
+        {
+          "file": "apps/secondApp/.eslintrc.json",
+          "hash": "3512317670643487111"
+        },
+        {
+          "file": "apps/secondApp/jest.config.ts",
+          "hash": "4213666220751219731"
+        },
+        {
+          "file": "apps/secondApp/project.json",
+          "hash": "17071001097849862751"
+        },
+        {
+          "file": "apps/secondApp/src/app/app.component.html",
+          "hash": "18429531223318506643"
+        },
+        {
+          "file": "apps/secondApp/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/secondApp/src/app/app.component.spec.ts",
+          "hash": "11941288193041278047",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/secondApp/src/app/app.component.ts",
+          "hash": "14342817817344875237",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/secondApp/src/app/app.config.ts",
+          "hash": "13070307288845959058",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/secondApp/src/app/app.routes.ts",
+          "hash": "6185150965714414910",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/secondApp/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/secondApp/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/secondApp/src/index.html",
+          "hash": "13761168204210522036"
+        },
+        {
+          "file": "apps/secondApp/src/main.ts",
+          "hash": "16474350267210703978",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/secondApp/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/secondApp/src/test-setup.ts",
+          "hash": "6737875390675737258",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/secondApp/tsconfig.app.json",
+          "hash": "11795995879911801785"
+        },
+        {
+          "file": "apps/secondApp/tsconfig.editor.json",
+          "hash": "5432951212168770151"
+        },
+        {
+          "file": "apps/secondApp/tsconfig.json",
+          "hash": "16464992189847561130"
+        },
+        {
+          "file": "apps/secondApp/tsconfig.spec.json",
+          "hash": "3419358724137916114"
         }
       ]
     }

@@ -5,7 +5,7 @@ import { FooterComponent } from './core/ui/footer/footer.component';
 import { HeaderComponent } from './core/ui/header/header.component';
 
 @Component({
-    selector: 'app-root',
+    selector: 'fir-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     standalone: true,
