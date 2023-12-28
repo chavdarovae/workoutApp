@@ -1544,3 +1544,15 @@ CreateNodesError: Unable to create nodes for apps/workout/project.json using plu
 [NX Daemon Server] - 2023-12-28T15:43:34.943Z - [REQUEST]: .github/workflows/workfolw.yml
 [NX Daemon Server] - 2023-12-28T15:43:34.943Z - [REQUEST]: 
 [NX Daemon Server] - 2023-12-28T15:43:34.980Z - Time taken for 'hash changed files from watcher' 0.5490950001403689ms
+[NX Daemon Server] - 2023-12-28T15:47:18.524Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2023-12-28T15:47:18.525Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-28T15:47:18.926Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-28T15:47:18.935Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2023-12-28T15:47:18.935Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-28T15:47:18.974Z - Time taken for 'hash changed files from watcher' 0.2023220006376505ms
+[NX Daemon Server] - 2023-12-28T15:47:18.978Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2023-12-28T15:47:18.978Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-28T15:47:19.780Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-28T15:47:19.781Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2023-12-28T15:47:19.781Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-28T15:47:19.832Z - Time taken for 'hash changed files from watcher' 0.6861919993534684ms
