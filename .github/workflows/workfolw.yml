@@ -18,16 +18,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: echo "Installing" && npm install --force && npm run build:prod
+        run: echo "Installing" && npm install --force && npm run build:prod:firstApp
 
       - name: Build
-        run: echo "Building" && npm install --force && npm run build:prod
+        run: echo "Building" && npm install --force && npm run build:prod:firstApp
 
       - name: Lint
-        run: echo "Linting" && npm run lint
+        run: echo "Linting" && npm run lint:firstApp
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-branches
-          folder: dist/frontend
+          folder: dist/frontend/apps/firstApp
