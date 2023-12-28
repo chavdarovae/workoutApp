@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx lint firstApp",
-    "startTime": "2023-12-28T15:33:12.522Z",
-    "endTime": "2023-12-28T15:33:14.466Z",
+    "command": "nx serve firstApp",
+    "startTime": "2023-12-28T15:12:16.056Z",
+    "endTime": "2023-12-28T15:37:47.819Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "firstApp:lint",
-      "target": "lint",
+      "taskId": "firstApp:serve:development",
+      "target": "serve",
       "projectName": "firstApp",
-      "hash": "9289992774522748001",
-      "startTime": "2023-12-28T15:33:12.532Z",
-      "endTime": "2023-12-28T15:33:14.466Z",
+      "hash": "165011825500083950",
+      "startTime": "2023-12-28T15:12:16.064Z",
+      "endTime": "2023-12-28T15:37:47.815Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1
