@@ -1556,3 +1556,9 @@ CreateNodesError: Unable to create nodes for apps/workout/project.json using plu
 [NX Daemon Server] - 2023-12-28T15:47:19.781Z - [REQUEST]: .github/workflows/workfolw.yml
 [NX Daemon Server] - 2023-12-28T15:47:19.781Z - [REQUEST]: 
 [NX Daemon Server] - 2023-12-28T15:47:19.832Z - Time taken for 'hash changed files from watcher' 0.6861919993534684ms
+[NX Daemon Server] - 2023-12-28T15:52:18.685Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2023-12-28T15:52:18.685Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-28T15:52:20.286Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-28T15:52:20.286Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2023-12-28T15:52:20.286Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-28T15:52:20.327Z - Time taken for 'hash changed files from watcher' 0.23863700032234192ms

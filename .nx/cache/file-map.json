@@ -73,88 +73,88 @@
         "hash": "4815948323043747099"
       },
       {
-        "file": "apps/workout/src/assets/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "3315561901865453261"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "9023502842078679382"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "nx.json",
-        "hash": "16535448144383645660"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "12462682381044934236"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "15598910314814648805"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11933293496705268176"
-      },
-      {
-        "file": "package.json",
-        "hash": "16242209467828948174"
-      },
-      {
-        "file": ".github/workflows/workfolw.yml",
-        "hash": "13644895089006860835"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6823307792501081625"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "13669385779797275480"
-      },
-      {
         "file": "apps/workout/src/index.html",
         "hash": "17579412099930716879"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "784073937244697133"
-      },
-      {
-        "file": "tsconfig.app.json",
-        "hash": "17337579397915052279"
       },
       {
         "file": "jest.config.ts",
         "hash": "17078405625718920242"
       },
       {
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "9023502842078679382"
+      },
+      {
         "file": ".prettierignore",
         "hash": "3395189204293871444"
+      },
+      {
+        "file": ".github/workflows/workfolw.yml",
+        "hash": "2865831512399932973"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6823307792501081625"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "17337579397915052279"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "784073937244697133"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "13669385779797275480"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "3315561901865453261"
+      },
+      {
+        "file": "apps/workout/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11933293496705268176"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "12462682381044934236"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16117882425360397805"
       },
       {
         "file": ".vscode/tasks.json",
         "hash": "5336636969995539451"
       },
       {
-        "file": "tsconfig.spec.json",
-        "hash": "15575553540147145788"
+        "file": "LICENSE",
+        "hash": "15598910314814648805"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16535448144383645660"
       },
       {
         "file": "README.md",
         "hash": "2560325435466092702"
       },
       {
-        "file": ".prettierrc",
-        "hash": "16117882425360397805"
+        "file": "package.json",
+        "hash": "16242209467828948174"
       }
     ],
     "projectFileMap": {
