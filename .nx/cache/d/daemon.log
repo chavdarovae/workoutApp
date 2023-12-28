@@ -1814,3 +1814,8 @@ Unable to create nodes for package-lock.json using plugin nx-js-graph-plugin.
 [NX Daemon Server] - 2023-12-28T16:13:49.705Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2023-12-28T16:13:49.769Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2023-12-28T16:13:53.738Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-28T16:15:45.727Z - [WATCHER]: .gitignore was modified
+[NX Daemon Server] - 2023-12-28T16:15:45.729Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-28T16:15:45.730Z - [WATCHER]: Stopping the watcher for /Users/emiliyachavdarova/Personal/nodeApp/frontend (sources)
+[NX Daemon Server] - 2023-12-28T16:15:45.731Z - [WATCHER]: Stopping the watcher for /Users/emiliyachavdarova/Personal/nodeApp/frontend (outputs)
+[NX Daemon Server] - 2023-12-28T16:15:45.731Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
