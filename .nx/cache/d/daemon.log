@@ -1459,3 +1459,34 @@ CreateNodesError: Unable to create nodes for apps/workout/project.json using plu
 [NX Daemon Server] - 2023-12-28T15:29:32.300Z - [REQUEST]: .github/workflows/workfolw.yml
 [NX Daemon Server] - 2023-12-28T15:29:32.300Z - [REQUEST]: 
 [NX Daemon Server] - 2023-12-28T15:29:32.339Z - Time taken for 'hash changed files from watcher' 0.6592089999467134ms
+[NX Daemon Server] - 2023-12-28T15:33:12.344Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2023-12-28T15:33:12.345Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-12-28T15:33:12.345Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2023-12-28T15:33:12.346Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-28T15:33:12.346Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-28T15:33:12.348Z - Time taken for 'total for creating and serializing project graph' 0.13716300018131733ms
+[NX Daemon Server] - 2023-12-28T15:33:12.355Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-28T15:33:12.355Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 9.
+[NX Daemon Server] - 2023-12-28T15:33:12.473Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2023-12-28T15:33:12.473Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2023-12-28T15:33:12.473Z - Handled HASH_TASKS. Handling time: 9. Response time: 0.
+[NX Daemon Server] - 2023-12-28T15:33:12.531Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2023-12-28T15:33:12.531Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2023-12-28T15:33:12.531Z - Handled HASH_TASKS. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2023-12-28T15:33:14.465Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-28T15:33:14.465Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-28T15:33:14.465Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2023-12-28T15:33:14.538Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2023-12-28T15:33:14.538Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2023-12-28T15:33:14.538Z - Handled PROCESS_IN_BACKGROUND. Handling time: 23. Response time: 0.
+[NX Daemon Server] - 2023-12-28T15:33:14.539Z - Uploading file artifacts
+[NX Daemon Server] - 2023-12-28T15:33:14.539Z - Done uploading file artifacts
+[NX Daemon Server] - 2023-12-28T15:33:14.539Z - Sending EndRun request
+[NX Daemon Server] - 2023-12-28T15:33:14.549Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-12-28T15:33:14.719Z - Done sending EndRun request
+[NX Daemon Server] - 2023-12-28T15:33:28.302Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-28T15:33:28.303Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2023-12-28T15:33:28.405Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-28T15:33:28.406Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2023-12-28T15:33:28.406Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-28T15:33:28.467Z - Time taken for 'hash changed files from watcher' 0.5974809997715056ms
