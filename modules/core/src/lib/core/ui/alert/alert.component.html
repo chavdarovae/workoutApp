@@ -1,0 +1,5 @@
+<div *ngFor="let alert of alertService.alerts()"
+	[class]="'alert ' + alert.type">
+	{{alert.msg}}
+	<i class="fa-solid fa-xmark"  (click)="alertService.clearAlerts()"></i>
+</div>

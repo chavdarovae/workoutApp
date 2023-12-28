@@ -1,5 +1,10 @@
 {
-	"compilerOptions": {
+  "compilerOptions": {
+    "paths": {
+      "core": [
+        "./dist/core"
+      ]
+    },
 		"outDir": "./dist/out-tsc",
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,

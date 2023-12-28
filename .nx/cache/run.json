@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx run-many --targets=serve",
-    "startTime": "2023-12-28T16:09:40.069Z",
-    "endTime": "2023-12-28T16:11:52.964Z",
+    "startTime": "2023-12-28T16:11:58.517Z",
+    "endTime": "2023-12-28T16:17:14.484Z",
     "inner": false
   },
   "tasks": [
@@ -11,8 +11,8 @@
       "target": "serve",
       "projectName": "secondApp",
       "hash": "294339298346736006",
-      "startTime": "2023-12-28T16:09:40.081Z",
-      "endTime": "2023-12-28T16:11:52.921Z",
+      "startTime": "2023-12-28T16:11:58.525Z",
+      "endTime": "2023-12-28T16:17:14.481Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1
@@ -22,8 +22,8 @@
       "target": "serve",
       "projectName": "firstApp",
       "hash": "6931571873267840389",
-      "startTime": "2023-12-28T16:09:40.080Z",
-      "endTime": "2023-12-28T16:11:52.964Z",
+      "startTime": "2023-12-28T16:11:58.524Z",
+      "endTime": "2023-12-28T16:17:14.483Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

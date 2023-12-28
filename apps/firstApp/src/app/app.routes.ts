@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-export const APP_ROUTES: Routes = [
+export const FIRST_APP_ROUTES: Routes = [
 	{
 		path: '',
 		redirectTo: 'login',
@@ -16,7 +16,7 @@ export const APP_ROUTES: Routes = [
 	},
 	{
 		path: 'workouts',
-		loadChildren: () => import('./workouts/util/workouts.routes').then(r => r.WORKOUT_ROUTES)
+		loadChildren: () => import('@workouts').then(r => r.WORKOUT_ROUTES)
 	},
 	{
 		path: 'about',

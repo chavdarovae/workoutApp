@@ -11,7 +11,9 @@
 		"lib": ["ES2022", "dom"],
 		"baseUrl": "./",
 		"paths": {
-			"workout": ["modules/src/index.ts"]
+			"@account": ["modules/account/src/lib/lib.routes"],
+			"@workouts": ["modules/workouts/src/lib/lib.routes"],
+			"core": ["modules/core/src/index.ts"]
 		}
 	}
 }
