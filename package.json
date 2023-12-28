@@ -3,7 +3,9 @@
 	"version": "0.0.0",
 	"scripts": {
 		"ng": "ng",
-		"start": "nx serve-many",
+		"start:all": "nx run-many --targets=serve",
+		"start:firstApp": "nx serve firstApp",
+		"start:secondApp": "nx serve secondApp",
 		"build": "nx build",
 		"build:prod:firstApp": "nx build firstApp --configuration=production --base-href=https://chavdarovae.github.io/workoutApp/",
 		"watch": "nx build --watch --configuration development",
