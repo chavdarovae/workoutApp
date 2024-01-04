@@ -3430,3 +3430,9 @@ Error: Failed to process project dependencies with "nx-js-graph-plugin".
 [NX Daemon Server] - 2024-01-04T22:04:58.244Z - Time taken for 'hash changed files from watcher' 0.24539599986746907ms
 [NX Daemon Server] - 2024-01-04T22:04:58.389Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-01-04T22:04:58.440Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:09:45.872Z - [WATCHER]: apps/secondApp/src/styles/_variables.scss was modified
+[NX Daemon Server] - 2024-01-04T22:09:45.873Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:09:52.274Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-04T22:09:52.274Z - [REQUEST]: apps/secondApp/src/styles/_variables.scss
+[NX Daemon Server] - 2024-01-04T22:09:52.274Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-04T22:09:52.327Z - Time taken for 'hash changed files from watcher' 0.6595219997689128ms
