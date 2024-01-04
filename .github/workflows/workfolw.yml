@@ -2,8 +2,10 @@ name: GitHubPages Deploy
 
 on:
   push:
-    branches:
-      - "main"
+    # branches:
+    #   - "main"
+    paths:
+      - 'apps/firstApp/**'
 
 jobs:
   build:

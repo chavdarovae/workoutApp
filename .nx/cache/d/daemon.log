@@ -3386,3 +3386,15 @@ Error: Failed to process project dependencies with "nx-js-graph-plugin".
 [NX Daemon Server] - 2024-01-04T21:45:12.666Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 8.
 [NX Daemon Server] - 2024-01-04T21:45:25.108Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-01-04T21:45:25.230Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T21:59:17.718Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-01-04T21:59:17.718Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T21:59:17.820Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-04T21:59:17.820Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-01-04T21:59:17.820Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-04T21:59:17.862Z - Time taken for 'hash changed files from watcher' 0.42664000019431114ms
+[NX Daemon Server] - 2024-01-04T21:59:30.270Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T21:59:30.271Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-01-04T21:59:30.472Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-04T21:59:30.472Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-01-04T21:59:30.472Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-04T21:59:30.510Z - Time taken for 'hash changed files from watcher' 0.35607199976220727ms
