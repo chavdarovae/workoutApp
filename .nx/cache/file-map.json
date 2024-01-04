@@ -76,92 +76,92 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".eslintrc.json",
-        "hash": "12462682381044934236"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "17078405625718920242"
-      },
-      {
-        "file": ".github/workflows/workfolw.yml",
-        "hash": "6887647993105997307"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6823307792501081625"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "10788943593490010817"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "15598910314814648805"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11933293496705268176"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16117882425360397805"
-      },
-      {
-        "file": "nx.json",
-        "hash": "16535448144383645660"
-      },
-      {
-        "file": "styles/nomalize.scss",
-        "hash": "2241966981922702604"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "3223577930228732345"
-      },
-      {
-        "file": "tsconfig.spec.json",
-        "hash": "15575553540147145788"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "3315561901865453261"
-      },
-      {
-        "file": ".vscode/tasks.json",
-        "hash": "5336636969995539451"
-      },
-      {
         "file": "styles/global-styles.scss",
         "hash": "261737606422192094"
-      },
-      {
-        "file": "package.json",
-        "hash": "15211518401889963143"
       },
       {
         "file": ".vscode/launch.json",
         "hash": "4815948323043747099"
       },
       {
-        "file": "README.md",
-        "hash": "2560325435466092702"
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "24222220201050742"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6823307792501081625"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "15598910314814648805"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "3315561901865453261"
+      },
+      {
+        "file": "package.json",
+        "hash": "15211518401889963143"
+      },
+      {
+        "file": "styles/nomalize.scss",
+        "hash": "2241966981922702604"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "17078405625718920242"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16535448144383645660"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11933293496705268176"
       },
       {
         "file": "tsconfig.app.json",
         "hash": "17337579397915052279"
       },
       {
-        "file": "tsconfig.json",
-        "hash": "24222220201050742"
+        "file": ".prettierrc",
+        "hash": "16117882425360397805"
+      },
+      {
+        "file": ".github/workflows/workfolw.yml",
+        "hash": "6887647993105997307"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "10788943593490010817"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "12462682381044934236"
+      },
+      {
+        "file": "README.md",
+        "hash": "2560325435466092702"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "3223577930228732345"
       }
     ],
     "projectFileMap": {
@@ -663,7 +663,7 @@
         },
         {
           "file": "apps/firstApp/src/styles/_variables.scss",
-          "hash": "17890740222080652875"
+          "hash": "6950049133159334757"
         },
         {
           "file": "apps/firstApp/src/styles/theme.scss",

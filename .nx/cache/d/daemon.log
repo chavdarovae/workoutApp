@@ -3398,3 +3398,20 @@ Error: Failed to process project dependencies with "nx-js-graph-plugin".
 [NX Daemon Server] - 2024-01-04T21:59:30.472Z - [REQUEST]: .github/workflows/workfolw.yml
 [NX Daemon Server] - 2024-01-04T21:59:30.472Z - [REQUEST]: 
 [NX Daemon Server] - 2024-01-04T21:59:30.510Z - Time taken for 'hash changed files from watcher' 0.35607199976220727ms
+[NX Daemon Server] - 2024-01-04T22:01:23.643Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:01:23.645Z - [WATCHER]: apps/firstApp/src/styles/_variables.scss was modified
+[NX Daemon Server] - 2024-01-04T22:01:24.046Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-04T22:01:24.046Z - [REQUEST]: apps/firstApp/src/styles/_variables.scss
+[NX Daemon Server] - 2024-01-04T22:01:24.046Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-04T22:01:24.099Z - Time taken for 'hash changed files from watcher' 0.23890900006517768ms
+[NX Daemon Server] - 2024-01-04T22:01:24.310Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:01:24.370Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:01:39.275Z - [WATCHER]: apps/firstApp/src/styles/_variables.scss was modified
+[NX Daemon Server] - 2024-01-04T22:01:39.276Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:01:39.483Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:01:40.077Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-04T22:01:40.077Z - [REQUEST]: apps/firstApp/src/styles/_variables.scss
+[NX Daemon Server] - 2024-01-04T22:01:40.077Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-04T22:01:40.114Z - Time taken for 'hash changed files from watcher' 0.2092059999704361ms
+[NX Daemon Server] - 2024-01-04T22:01:42.869Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-04T22:01:42.994Z - [WATCHER]: Processing file changes in outputs
