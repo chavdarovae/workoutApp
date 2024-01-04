@@ -76,325 +76,270 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tsconfig.json",
-        "hash": "24222220201050742"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "4815948323043747099"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "12573609126851050734"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "3315561901865453261"
+        "file": ".editorconfig",
+        "hash": "11933293496705268176"
       },
       {
         "file": ".eslintrc.json",
         "hash": "12462682381044934236"
       },
       {
-        "file": ".vscode/tasks.json",
-        "hash": "5336636969995539451"
+        "file": ".github/workflows/workfolw.yml",
+        "hash": "2865831512399932973"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "3223577930228732345"
+        "file": ".gitignore",
+        "hash": "6823307792501081625"
       },
       {
         "file": ".prettierignore",
         "hash": "3395189204293871444"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11933293496705268176"
-      },
-      {
-        "file": "tsconfig.spec.json",
-        "hash": "15575553540147145788"
-      },
-      {
-        "file": "README.md",
-        "hash": "2560325435466092702"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "10788943593490010817"
-      },
-      {
         "file": ".prettierrc",
         "hash": "16117882425360397805"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "17078405625718920242"
+        "file": ".vscode/extensions.json",
+        "hash": "3315561901865453261"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "4815948323043747099"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
       },
       {
         "file": "LICENSE",
         "hash": "15598910314814648805"
       },
       {
+        "file": "README.md",
+        "hash": "2560325435466092702"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "17078405625718920242"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
         "file": "nx.json",
         "hash": "16535448144383645660"
       },
       {
-        "file": "tsconfig.app.json",
-        "hash": "17337579397915052279"
+        "file": "package-lock.json",
+        "hash": "10788943593490010817"
       },
       {
         "file": "package.json",
         "hash": "15211518401889963143"
       },
       {
-        "file": ".github/workflows/workfolw.yml",
-        "hash": "2865831512399932973"
+        "file": "styles/global-styles.scss",
+        "hash": "261737606422192094"
+      },
+      {
+        "file": "styles/nomalize.scss",
+        "hash": "2241966981922702604"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "17337579397915052279"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "3223577930228732345"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "24222220201050742"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
       }
     ],
     "projectFileMap": {
-      "account": [
+      "workouts": [
         {
-          "file": "modules/account/.eslintrc.json",
+          "file": "modules/workouts/.eslintrc.json",
           "hash": "2455782325866711491"
         },
         {
-          "file": "modules/account/README.md",
-          "hash": "10702126471497097611"
+          "file": "modules/workouts/README.md",
+          "hash": "14705563682165760825"
         },
         {
-          "file": "modules/account/jest.config.ts",
-          "hash": "769183626046085759"
+          "file": "modules/workouts/jest.config.ts",
+          "hash": "14135386537395473653"
         },
         {
-          "file": "modules/account/project.json",
-          "hash": "17048949886557882248"
+          "file": "modules/workouts/project.json",
+          "hash": "13099879888901281437"
         },
         {
-          "file": "modules/account/src/index.ts",
-          "hash": "6402405028469316271"
+          "file": "modules/workouts/src/index.ts",
+          "hash": "12257928315311034591"
         },
         {
-          "file": "modules/account/src/lib/account/account.component.html",
-          "hash": "15195065512304412681"
-        },
-        {
-          "file": "modules/account/src/lib/account/account.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "modules/account/src/lib/account/account.component.spec.ts",
-          "hash": "12262016079345082308",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/account/src/lib/account/account.component.ts",
-          "hash": "16937630296669333644",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
-          ]
-        },
-        {
-          "file": "modules/account/src/lib/lib.routes.ts",
-          "hash": "12915110015075482154",
+          "file": "modules/workouts/src/lib/lib.routes.ts",
+          "hash": "11676489617720320029",
           "deps": [
             "npm:@angular/router"
           ]
         },
         {
-          "file": "modules/account/src/test-setup.ts",
-          "hash": "6737875390675737258",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "modules/account/tsconfig.json",
-          "hash": "16966205107277045100"
-        },
-        {
-          "file": "modules/account/tsconfig.lib.json",
-          "hash": "10363152755986676153"
-        },
-        {
-          "file": "modules/account/tsconfig.spec.json",
-          "hash": "3419358724137916114"
-        }
-      ],
-      "firstApp-e2e": [
-        {
-          "file": "apps/firstApp-e2e/.eslintrc.json",
-          "hash": "6576998403801642250"
-        },
-        {
-          "file": "apps/firstApp-e2e/cypress.config.ts",
-          "hash": "17985982090433393030",
-          "deps": [
-            "npm:@nx/cypress",
-            "npm:cypress"
-          ]
-        },
-        {
-          "file": "apps/firstApp-e2e/project.json",
-          "hash": "60059413949384889"
-        },
-        {
-          "file": "apps/firstApp-e2e/src/e2e/app.cy.ts",
-          "hash": "13601925637191447141"
-        },
-        {
-          "file": "apps/firstApp-e2e/src/fixtures/example.json",
-          "hash": "6950778556131045369"
-        },
-        {
-          "file": "apps/firstApp-e2e/src/support/app.po.ts",
-          "hash": "11157016311132186162"
-        },
-        {
-          "file": "apps/firstApp-e2e/src/support/commands.ts",
-          "hash": "7702314073611385872"
-        },
-        {
-          "file": "apps/firstApp-e2e/src/support/e2e.ts",
-          "hash": "1054106023200826784"
-        },
-        {
-          "file": "apps/firstApp-e2e/tsconfig.json",
-          "hash": "4227521066891220640"
-        }
-      ],
-      "core": [
-        {
-          "file": "modules/core/.eslintrc.json",
-          "hash": "16079425939978596307"
-        },
-        {
-          "file": "modules/core/README.md",
-          "hash": "9810432091555253122"
-        },
-        {
-          "file": "modules/core/jest.config.ts",
-          "hash": "10896961221391107757"
-        },
-        {
-          "file": "modules/core/project.json",
-          "hash": "3537327912879372674"
-        },
-        {
-          "file": "modules/core/src/index.ts",
-          "hash": "11024002431212115454"
-        },
-        {
-          "file": "modules/core/src/test-setup.ts",
-          "hash": "6737875390675737258",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "modules/core/tsconfig.json",
-          "hash": "16966205107277045100"
-        },
-        {
-          "file": "modules/core/tsconfig.lib.json",
-          "hash": "10363152755986676153"
-        },
-        {
-          "file": "modules/core/tsconfig.spec.json",
-          "hash": "3419358724137916114"
-        },
-        {
-          "file": "modules/core/src/lib/core/ui/alert/alert.component.html",
-          "hash": "15072966430886393959"
-        },
-        {
-          "file": "modules/core/src/lib/core/ui/header/header.component.scss",
-          "hash": "848845492474761215"
-        },
-        {
-          "file": "modules/core/src/lib/core/data-access/alert.service.ts",
-          "hash": "5322635768523086255",
+          "file": "modules/workouts/src/lib/workouts/data-access/workouts.service.spec.ts",
+          "hash": "14166262787252543753",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "modules/core/src/lib/core/ui/alert/alert.component.spec.ts",
-          "hash": "7563050826823415027",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/core/src/lib/core/util/alert.model.ts",
-          "hash": "2577101632876294290"
-        },
-        {
-          "file": "modules/core/src/lib/core/ui/header/header.component.ts",
-          "hash": "591823095568543224",
+          "file": "modules/workouts/src/lib/workouts/data-access/workouts.service.ts",
+          "hash": "12857580445311358180",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/core",
             "npm:@angular/router",
-            "firstApp"
+            "firstApp",
+            "npm:rxjs"
           ]
         },
         {
-          "file": "modules/core/src/lib/core/ui/header/header.component.html",
-          "hash": "7376084862549917765"
+          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.html",
+          "hash": "13965452575482062394"
         },
         {
-          "file": "modules/core/src/lib/core/ui/alert/alert.component.scss",
-          "hash": "12465404086627956859"
+          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.scss",
+          "hash": "9993950643360197316"
         },
         {
-          "file": "modules/core/src/lib/core/util/general.interface.ts",
-          "hash": "15921176019057878861"
-        },
-        {
-          "file": "modules/core/src/lib/core/ui/footer/footer.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "modules/core/src/lib/core/ui/header/header.component.spec.ts",
-          "hash": "8466258547967989846",
+          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.spec.ts",
+          "hash": "15251676109705244173",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "modules/core/src/lib/core/ui/footer/footer.component.html",
-          "hash": "4602750922183344038"
-        },
-        {
-          "file": "modules/core/src/lib/core/ui/footer/footer.component.ts",
-          "hash": "2628886749248323423",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/core/src/lib/core/ui/alert/alert.component.ts",
-          "hash": "16445337309832169861",
+          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.ts",
+          "hash": "743443699373775517",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/core",
-            "firstApp"
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "npm:@angular/router"
           ]
         },
         {
-          "file": "modules/core/src/lib/core/ui/footer/footer.component.spec.ts",
-          "hash": "16898459265884948606",
+          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.html",
+          "hash": "13261058944814693330"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.scss",
+          "hash": "8905080382037398509"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.spec.ts",
+          "hash": "5667568956567529618",
           "deps": [
             "npm:@angular/core"
           ]
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.ts",
+          "hash": "4020039063681429584",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.html",
+          "hash": "292665540685399302"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.scss",
+          "hash": "4055606894390288348"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.spec.ts",
+          "hash": "8464615097347761144",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.ts",
+          "hash": "7985859960494880141",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.html",
+          "hash": "13261058944814693330"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.scss",
+          "hash": "8905080382037398509"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.spec.ts",
+          "hash": "6222217536015241541",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.ts",
+          "hash": "8885486854381917654",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/util/interface/workout.interfaces.ts",
+          "hash": "15080107940185567383"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/util/models/workout.models.ts",
+          "hash": "10248825808123082139"
+        },
+        {
+          "file": "modules/workouts/src/lib/workouts/util/workouts.routes.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "modules/workouts/src/test-setup.ts",
+          "hash": "6737875390675737258",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "modules/workouts/tsconfig.json",
+          "hash": "16966205107277045100"
+        },
+        {
+          "file": "modules/workouts/tsconfig.lib.json",
+          "hash": "10363152755986676153"
+        },
+        {
+          "file": "modules/workouts/tsconfig.spec.json",
+          "hash": "3419358724137916114"
         }
       ],
       "firstApp": [
@@ -671,137 +616,6 @@
           "hash": "15921176019057878861"
         },
         {
-          "file": "apps/firstApp/src/app/workouts/data-access/workouts.service.spec.ts",
-          "hash": "14166262787252543753",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/data-access/workouts.service.ts",
-          "hash": "10112634628795372952",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.html",
-          "hash": "13965452575482062394"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.scss",
-          "hash": "9993950643360197316"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.spec.ts",
-          "hash": "15251676109705244173",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-create/workout-create.component.ts",
-          "hash": "4313487284066166569",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/material",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.html",
-          "hash": "13261058944814693330"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.scss",
-          "hash": "8905080382037398509"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.spec.ts",
-          "hash": "5667568956567529618",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-detail/workout-detail.component.ts",
-          "hash": "7280913881944809670",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.html",
-          "hash": "292665540685399302"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.scss",
-          "hash": "4055606894390288348"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.spec.ts",
-          "hash": "8464615097347761144",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/feature/workout-list/workout-list.component.ts",
-          "hash": "18124639120793733905",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/material",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.html",
-          "hash": "13261058944814693330"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.scss",
-          "hash": "8905080382037398509"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.spec.ts",
-          "hash": "6222217536015241541",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/ui/workout-preview/workout-preview.component.ts",
-          "hash": "8885486854381917654",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/util/interface/workout.interfaces.ts",
-          "hash": "15080107940185567383"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/util/models/workout.models.ts",
-          "hash": "10248825808123082139"
-        },
-        {
-          "file": "apps/firstApp/src/app/workouts/util/workouts.routes.ts",
-          "hash": "17570521872914779717",
-          "deps": [
-            "npm:@angular/router"
-          ]
-        },
-        {
           "file": "apps/firstApp/src/assets/.gitkeep",
           "hash": "3244421341483603138"
         },
@@ -831,7 +645,7 @@
         },
         {
           "file": "apps/firstApp/src/main.ts",
-          "hash": "6226655976366691660",
+          "hash": "13779326213917189143",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/core",
@@ -845,15 +659,11 @@
         },
         {
           "file": "apps/firstApp/src/styles.scss",
-          "hash": "7447133920211595281"
+          "hash": "16629633767990317438"
         },
         {
           "file": "apps/firstApp/src/styles/_variables.scss",
           "hash": "17890740222080652875"
-        },
-        {
-          "file": "apps/firstApp/src/styles/nomalize.scss",
-          "hash": "2241966981922702604"
         },
         {
           "file": "apps/firstApp/src/styles/theme.scss",
@@ -883,6 +693,48 @@
           "hash": "3419358724137916114"
         }
       ],
+      "firstApp-e2e": [
+        {
+          "file": "apps/firstApp-e2e/.eslintrc.json",
+          "hash": "6576998403801642250"
+        },
+        {
+          "file": "apps/firstApp-e2e/cypress.config.ts",
+          "hash": "17985982090433393030",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/firstApp-e2e/project.json",
+          "hash": "60059413949384889"
+        },
+        {
+          "file": "apps/firstApp-e2e/src/e2e/app.cy.ts",
+          "hash": "13601925637191447141"
+        },
+        {
+          "file": "apps/firstApp-e2e/src/fixtures/example.json",
+          "hash": "6950778556131045369"
+        },
+        {
+          "file": "apps/firstApp-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/firstApp-e2e/src/support/commands.ts",
+          "hash": "7702314073611385872"
+        },
+        {
+          "file": "apps/firstApp-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/firstApp-e2e/tsconfig.json",
+          "hash": "4227521066891220640"
+        }
+      ],
       "secondApp": [
         {
           "file": "apps/secondApp/.eslintrc.json",
@@ -894,7 +746,7 @@
         },
         {
           "file": "apps/secondApp/project.json",
-          "hash": "17071001097849862751"
+          "hash": "15165666261999192214"
         },
         {
           "file": "apps/secondApp/src/app/app.component.html",
@@ -921,22 +773,25 @@
           ]
         },
         {
-          "file": "apps/secondApp/src/app/app.config.ts",
-          "hash": "14981671879787130457",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
           "file": "apps/secondApp/src/app/app.routes.ts",
-          "hash": "17713255313436826559",
+          "hash": "372832267515994606",
           "deps": [
             "npm:@angular/router",
             [
               "workouts",
               "dynamic"
             ]
+          ]
+        },
+        {
+          "file": "apps/secondApp/src/app/core/data-access/auth.service.ts",
+          "hash": "5016921027029859077",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "firstApp",
+            "npm:rxjs"
           ]
         },
         {
@@ -953,14 +808,29 @@
         },
         {
           "file": "apps/secondApp/src/main.ts",
-          "hash": "16474350267210703978",
+          "hash": "12321968122616482927",
           "deps": [
-            "npm:@angular/platform-browser"
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router"
           ]
         },
         {
+          "file": "apps/secondApp/src/proxy.conf.json",
+          "hash": "84559467022881015"
+        },
+        {
           "file": "apps/secondApp/src/styles.scss",
-          "hash": "5195668842064076916"
+          "hash": "7482428209431285748"
+        },
+        {
+          "file": "apps/secondApp/src/styles/_variables.scss",
+          "hash": "12780445023747009864"
+        },
+        {
+          "file": "apps/secondApp/src/styles/theme.scss",
+          "hash": "13723672739912553540"
         },
         {
           "file": "apps/secondApp/src/test-setup.ts",
@@ -983,183 +853,6 @@
         },
         {
           "file": "apps/secondApp/tsconfig.spec.json",
-          "hash": "3419358724137916114"
-        }
-      ],
-      "workouts": [
-        {
-          "file": "modules/workouts/.eslintrc.json",
-          "hash": "2455782325866711491"
-        },
-        {
-          "file": "modules/workouts/README.md",
-          "hash": "14705563682165760825"
-        },
-        {
-          "file": "modules/workouts/jest.config.ts",
-          "hash": "14135386537395473653"
-        },
-        {
-          "file": "modules/workouts/project.json",
-          "hash": "13099879888901281437"
-        },
-        {
-          "file": "modules/workouts/src/index.ts",
-          "hash": "12257928315311034591"
-        },
-        {
-          "file": "modules/workouts/src/lib/lib.routes.ts",
-          "hash": "11676489617720320029",
-          "deps": [
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/data-access/workouts.service.spec.ts",
-          "hash": "14166262787252543753",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/data-access/workouts.service.ts",
-          "hash": "3512272830560008736",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "firstApp",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.html",
-          "hash": "13965452575482062394"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.scss",
-          "hash": "9993950643360197316"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.spec.ts",
-          "hash": "15251676109705244173",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-create/workout-create.component.ts",
-          "hash": "4313487284066166569",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/material",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.html",
-          "hash": "13261058944814693330"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.scss",
-          "hash": "8905080382037398509"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.spec.ts",
-          "hash": "5667568956567529618",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-detail/workout-detail.component.ts",
-          "hash": "7280913881944809670",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.html",
-          "hash": "292665540685399302"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.scss",
-          "hash": "4055606894390288348"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.spec.ts",
-          "hash": "8464615097347761144",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/feature/workout-list/workout-list.component.ts",
-          "hash": "18124639120793733905",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/material",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.html",
-          "hash": "13261058944814693330"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.scss",
-          "hash": "8905080382037398509"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.spec.ts",
-          "hash": "6222217536015241541",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/ui/workout-preview/workout-preview.component.ts",
-          "hash": "8885486854381917654",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/util/interface/workout.interfaces.ts",
-          "hash": "15080107940185567383"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/util/models/workout.models.ts",
-          "hash": "10248825808123082139"
-        },
-        {
-          "file": "modules/workouts/src/lib/workouts/util/workouts.routes.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "modules/workouts/src/test-setup.ts",
-          "hash": "6737875390675737258",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "modules/workouts/tsconfig.json",
-          "hash": "16966205107277045100"
-        },
-        {
-          "file": "modules/workouts/tsconfig.lib.json",
-          "hash": "10363152755986676153"
-        },
-        {
-          "file": "modules/workouts/tsconfig.spec.json",
           "hash": "3419358724137916114"
         }
       ]

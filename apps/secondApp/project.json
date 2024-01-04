@@ -3,7 +3,7 @@
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"projectType": "application",
 	"prefix": "sec",
-	"sourceRoot": "apps/secondApp//src",
+	"sourceRoot": "apps/secondApp/src",
 	"tags": [],
 	"targets": {
 		"build": {
@@ -11,16 +11,20 @@
 			"outputs": ["{options.outputPath}"],
 			"options": {
 				"outputPath": "dist/apps/secondApp/",
-				"index": "apps/secondApp//src/index.html",
-				"main": "apps/secondApp//src/main.ts",
+				"index": "apps/secondApp/src/index.html",
+				"main": "apps/secondApp/src/main.ts",
 				"polyfills": ["zone.js"],
-				"tsConfig": "apps/secondApp//tsconfig.app.json",
+				"tsConfig": "apps/secondApp/tsconfig.app.json",
 				"inlineStyleLanguage": "scss",
 				"assets": [
-					"apps/secondApp//src/favicon.ico",
-					"apps/secondApp//src/assets"
+					"apps/secondApp/src/favicon.ico",
+					"apps/secondApp/src/assets"
 				],
-				"styles": ["apps/secondApp//src/styles.scss"],
+				"styles": [
+					"apps/secondApp/src/styles.scss",
+					"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+					"apps/secondApp/src/styles/theme.scss"
+				],
 				"scripts": []
 			},
 			"configurations": {

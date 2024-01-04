@@ -102,57 +102,6 @@
         "implicitDependencies": []
       }
     },
-    "account": {
-      "name": "account",
-      "type": "lib",
-      "data": {
-        "root": "modules/account",
-        "name": "account",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "modules/account/src",
-        "prefix": "account",
-        "tags": [],
-        "projectType": "library",
-        "targets": {
-          "test": {
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ],
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "passWithNoTests": true,
-              "jestConfig": "modules/account/jest.config.ts"
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            }
-          },
-          "lint": {
-            "cache": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json"
-            ],
-            "executor": "@nx/eslint:lint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {},
-            "configurations": {}
-          }
-        },
-        "implicitDependencies": []
-      }
-    },
     "secondApp": {
       "name": "secondApp",
       "type": "app",
@@ -162,7 +111,7 @@
         "$schema": "../../node_modules/nx/schemas/project-schema.json",
         "projectType": "application",
         "prefix": "sec",
-        "sourceRoot": "apps/secondApp//src",
+        "sourceRoot": "apps/secondApp/src",
         "tags": [],
         "targets": {
           "build": {
@@ -180,19 +129,21 @@
             ],
             "options": {
               "outputPath": "dist/apps/secondApp/",
-              "index": "apps/secondApp//src/index.html",
-              "main": "apps/secondApp//src/main.ts",
+              "index": "apps/secondApp/src/index.html",
+              "main": "apps/secondApp/src/main.ts",
               "polyfills": [
                 "zone.js"
               ],
-              "tsConfig": "apps/secondApp//tsconfig.app.json",
+              "tsConfig": "apps/secondApp/tsconfig.app.json",
               "inlineStyleLanguage": "scss",
               "assets": [
-                "apps/secondApp//src/favicon.ico",
-                "apps/secondApp//src/assets"
+                "apps/secondApp/src/favicon.ico",
+                "apps/secondApp/src/assets"
               ],
               "styles": [
-                "apps/secondApp//src/styles.scss"
+                "apps/secondApp/src/styles.scss",
+                "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+                "apps/secondApp/src/styles/theme.scss"
               ],
               "scripts": []
             },
@@ -431,57 +382,6 @@
               "buildTarget": "firstApp:build",
               "port": 4200
             },
-            "configurations": {}
-          }
-        },
-        "implicitDependencies": []
-      }
-    },
-    "core": {
-      "name": "core",
-      "type": "lib",
-      "data": {
-        "root": "modules/core",
-        "name": "core",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "modules/core/src",
-        "prefix": "core",
-        "tags": [],
-        "projectType": "library",
-        "targets": {
-          "test": {
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ],
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "passWithNoTests": true,
-              "jestConfig": "modules/core/jest.config.ts"
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            }
-          },
-          "lint": {
-            "cache": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json"
-            ],
-            "executor": "@nx/eslint:lint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {},
             "configurations": {}
           }
         },
@@ -14303,28 +14203,6 @@
         "type": "static"
       }
     ],
-    "account": [
-      {
-        "source": "account",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "account",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "account",
-        "target": "npm:@angular/router",
-        "type": "static"
-      },
-      {
-        "source": "account",
-        "target": "npm:jest-preset-angular",
-        "type": "static"
-      }
-    ],
     "secondApp": [
       {
         "source": "secondApp",
@@ -14340,6 +14218,21 @@
         "source": "secondApp",
         "target": "workouts",
         "type": "dynamic"
+      },
+      {
+        "source": "secondApp",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "secondApp",
+        "target": "firstApp",
+        "type": "static"
+      },
+      {
+        "source": "secondApp",
+        "target": "npm:rxjs",
+        "type": "static"
       },
       {
         "source": "secondApp",
@@ -14396,33 +14289,6 @@
       {
         "source": "firstApp",
         "target": "npm:jest-preset-angular",
-        "type": "static"
-      }
-    ],
-    "core": [
-      {
-        "source": "core",
-        "target": "npm:jest-preset-angular",
-        "type": "static"
-      },
-      {
-        "source": "core",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "core",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "core",
-        "target": "npm:@angular/router",
-        "type": "static"
-      },
-      {
-        "source": "core",
-        "target": "firstApp",
         "type": "static"
       }
     ],

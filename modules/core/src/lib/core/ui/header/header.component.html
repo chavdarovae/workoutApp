@@ -1,9 +1,0 @@
-<div *ngIf="authService.currUser().email" class="container menu row row--sp-btw">
-	<a class="logo" routerLink="">
-		<img src="../../../../assets/img/logo.png" alt="logo.png">
-	</a>
-	<a class="ml-a" routerLink="/about" routerLinkActive="router-link-active" mat-button>About</a>
-	<a routerLink="/workouts" routerLinkActive="router-link-active" mat-button>Workouts</a>
-	<span class="anchor-like" mat-button (click)="authService.logout()">Logout</span>
-</div>
-
