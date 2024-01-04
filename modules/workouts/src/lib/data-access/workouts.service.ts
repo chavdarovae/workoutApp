@@ -4,9 +4,9 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { environment } from 'apps/firstApp/src/environments/environment.dev';
 import { BehaviorSubject, Observable, Subject, shareReplay, switchMap, tap } from 'rxjs';
+import { AlertService } from '../../../../../apps/firstApp/src/app/core/data-access/alert.service';
+import { Alert } from '../../../../../apps/firstApp/src/app/core/util/alert.model';
 import { IWorkout } from '../util/interface/workout.interfaces';
-import { AlertService } from './../../../../../../apps/firstApp/src/app/core/data-access/alert.service';
-import { Alert } from './../../../../../../apps/firstApp/src/app/core/util/alert.model';
 
 export type WorkoutUserAction = { type: 'delete' | 'modify' | 'select', workout?: IWorkout };
 
