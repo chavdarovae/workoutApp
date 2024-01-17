@@ -23,7 +23,7 @@
 				"styles": [
 					"apps/secondApp/src/styles.scss",
 					"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-					"apps/secondApp/src/styles/theme.scss"
+					"apps/modules/shared-assets/styles/theme.scss"
 				],
 				"scripts": []
 			},

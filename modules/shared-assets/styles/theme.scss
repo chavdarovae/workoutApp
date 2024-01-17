@@ -1,0 +1,124 @@
+@use "@angular/material" as mat;
+@include mat.core();
+@import "./_variables.scss";
+
+
+$primary-palette: (
+	50: $pri,
+	100: $pri,
+	200: $pri,
+	300: $pri,
+	400: $pri,
+	500: $pri,
+	600: $pri,
+	700: $pri,
+	800: $pri,
+	900: $pri,
+	A100: $pri,
+	A200: $pri,
+	A400: $pri,
+	A700: $pri,
+	contrast: (
+		50: white,
+		100: white,
+		200: white,
+		300: white,
+		400: white,
+		500: white,
+		600: white,
+		700: white,
+		800: white,
+		900: white,
+		A100: white,
+		A200: white,
+		A400: white,
+		A700: white,
+	),
+);
+
+$accent-palette: (
+	50: $acc,
+	100: $acc,
+	200: $acc,
+	300: $acc,
+	400: $acc,
+	500: $acc,
+	600: $acc,
+	700: $acc,
+	800: $acc,
+	900: $acc,
+	A100: $acc,
+	A200: $acc,
+	A400: $acc,
+	A700: $acc,
+	contrast: (
+		50: white,
+		100: white,
+		200: white,
+		300: white,
+		400: white,
+		500: white,
+		600: white,
+		700: white,
+		800: white,
+		900: white,
+		A100: white,
+		A200: white,
+		A400: white,
+		A700: white,
+	),
+);
+
+$warn-palette: (
+	50: $danger,
+	100: $danger,
+	200: $danger,
+	300: $danger,
+	400: $danger,
+	500: $danger,
+	600: $danger,
+	700: $danger,
+	800: $danger,
+	900: $danger,
+	A100: $danger,
+	A200: $danger,
+	A400: $danger,
+	A700: $danger,
+	contrast: (
+		50: white,
+		100: white,
+		200: white,
+		300: white,
+		400: white,
+		500: white,
+		600: white,
+		700: white,
+		800: white,
+		900: white,
+		A100: white,
+		A200: white,
+		A400: white,
+		A700: white,
+	),
+);
+
+
+$my-primary: mat.define-palette($primary-palette, 500);
+$my-accent: mat.define-palette($accent-palette, 500, 900, A100);
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette($warn-palette);
+
+$my-theme: mat.define-light-theme(
+	(
+		color: (
+			primary: $my-primary,
+			accent: $my-accent,
+			warn: $my-warn,
+		),
+		density: 0,
+	)
+);
+
+@include mat.all-component-themes($my-theme);
+
+

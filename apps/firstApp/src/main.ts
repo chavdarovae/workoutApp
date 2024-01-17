@@ -8,7 +8,6 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { FIRST_APP_ROUTES } from './app/app.routes';
-import { AuthService } from './app/core/data-access/auth.service';
 
 
 bootstrapApplication(AppComponent, {
@@ -20,8 +19,7 @@ bootstrapApplication(AppComponent, {
 			HttpClientXsrfModule,
 		),
 		provideAnimations(),
-		provideHttpClient(withInterceptorsFromDi()),
-		AuthService
+		provideHttpClient(withInterceptorsFromDi())
 	]
 })
 .catch(err => console.error(err));

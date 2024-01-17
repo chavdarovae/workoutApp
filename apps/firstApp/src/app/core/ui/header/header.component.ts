@@ -1,7 +1,7 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AuthService } from '../../data-access/auth.service';
+import { AuthService } from '@nodeApp/account';
 
 @Component({
     selector: 'app-header',

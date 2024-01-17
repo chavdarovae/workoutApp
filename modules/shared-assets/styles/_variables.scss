@@ -1,0 +1,30 @@
+:root {
+	--pri: #469597;
+	--sec: #5ba199;
+	--acc: #ddbeaa;
+
+	--danger: red;
+	--success: green;
+	--warn: tomato;
+
+	--textPri: #ffffff;
+	--textSec: #000000;
+
+	--bgPri: #b8dedc;
+	--bgSec: #bbc6c8;
+
+	--rounding: 5px;
+}
+
+$app: var(--app);
+$pri: var(--pri);
+$sec: var(--sec);
+$acc: var(--acc);
+$danger: var(--danger);
+$success: var(--success);
+$warn: var(--warn);
+$text-pri: var(--texPri);
+$text-sec: var(--textSec);
+$bg-pri: var(--bgPri);
+$bg-sec: var(--app);
+$rounding: var(--bgSec);

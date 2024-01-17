@@ -1,0 +1,52 @@
+{
+	"name": "account",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "modules/account/src",
+	"prefix": "lib",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "modules/account/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"]
+		},
+		"configurations": {
+			"production": {
+				"budgets": [{
+						"type": "initial",
+						"maximumWarning": "500kb",
+						"maximumError": "1mb"
+					},
+					{
+						"type": "anyComponentStyle",
+						"maximumWarning": "2kb",
+						"maximumError": "4kb"
+					}
+				],
+				"outputHashing": "all",
+				"fileReplacements": [{
+					"replace": "modules/account/src/environments/environment.ts",
+					"with": "modules/account/src/environments/environment.prod.ts"
+				}]
+			},
+			"development": {
+				"buildOptimizer": false,
+				"optimization": false,
+				"vendorChunk": true,
+				"extractLicenses": false,
+				"sourceMap": true,
+				"namedChunks": true,
+				"fileReplacements": [{
+					"replace": "modules/account/src/environments/environment.ts",
+					"with": "modules/account/src/environments/environment.dev.ts"
+				}]
+			}
+	}
+}

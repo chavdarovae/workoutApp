@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
-import { AuthService } from './../../../core/data-access/auth.service';
+import { AuthService } from '../../data-access/auth.service';
 
 @Component({
     selector: 'app-login',

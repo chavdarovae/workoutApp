@@ -3,12 +3,20 @@ import { Injectable, WritableSignal, computed, inject, signal } from '@angular/c
 import { Router } from '@angular/router';
 import { environment } from 'apps/firstApp/src/environments/environment';
 import { Subject, first, map, switchMap, tap } from 'rxjs';
-import { IAccount } from '../../account/util/interface/account.interfaces';
-import { ANONYMOS_USER } from '../constants/general.constants';
+import { IAccount } from '../util/interface/account.interfaces';
+
+
+export const ANONYMOS_USER: IAccount = {
+	_id: "",
+	email: "",
+	password: ""
+};
 
 export type AuthUserAction = { type: 'login' | 'logout', data?: IAccount };
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class AuthService {
 	http = inject(HttpClient);
 	router = inject(Router);
