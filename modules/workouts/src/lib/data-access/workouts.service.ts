@@ -3,9 +3,8 @@ import { Injectable, Signal, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { environment } from '@nodeApp/environments';
+import { AlertService } from '@nodeApp/alert';
 import { BehaviorSubject, Observable, Subject, shareReplay, switchMap, tap } from 'rxjs';
-import { AlertService } from '../../../../../apps/firstApp/src/app/core/data-access/alert.service';
-import { Alert } from '../../../../../apps/firstApp/src/app/core/util/alert.model';
 import { IWorkout } from '../util/interface/workout.interfaces';
 
 export type WorkoutUserAction = { type: 'delete' | 'modify' | 'select', workout?: IWorkout };

@@ -12,9 +12,10 @@
 		"baseUrl": "./",
 		"paths": {
 			"@nodeApp/account": ["modules/account/src/index.ts"],
-			"@nodeApp/workouts": ["modules/workouts/src/index.ts"],
-			"@nodeApp/styles": ["modules/shared-assetss"],
 			"@nodeApp/environments": ["environments/environment.ts"],
+			"@nodeApp/styles": ["modules/shared-assetss"],
+			"@nodeApp/workouts": ["modules/workouts/src/index.ts"],
+			"@nodeApp/alert": ["modules/alerts/src/index.ts"]
 		}
 	}
 }
