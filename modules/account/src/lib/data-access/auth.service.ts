@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, WritableSignal, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from 'apps/firstApp/src/environments/environment';
+import { environment } from '@nodeApp/environments';
 import { Subject, first, map, switchMap, tap } from 'rxjs';
 import { IAccount } from '../util/interface/account.interfaces';
 

@@ -2,7 +2,7 @@
 	"name": "workouts",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "modules/workouts/src",
-	"prefix": "account",
+	"prefix": "workouts",
 	"tags": [],
 	"projectType": "library",
 	"targets": {

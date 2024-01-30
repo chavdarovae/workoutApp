@@ -2,7 +2,7 @@
 	"name": "account",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "modules/account/src",
-	"prefix": "lib",
+	"prefix": "account",
 	"tags": [],
 	"projectType": "library",
 	"targets": {
@@ -32,8 +32,8 @@
 				],
 				"outputHashing": "all",
 				"fileReplacements": [{
-					"replace": "modules/account/src/environments/environment.ts",
-					"with": "modules/account/src/environments/environment.prod.ts"
+					"replace": "environments/environment.ts",
+					"with": "environments/environment.prod.ts"
 				}]
 			},
 			"development": {
@@ -44,9 +44,10 @@
 				"sourceMap": true,
 				"namedChunks": true,
 				"fileReplacements": [{
-					"replace": "modules/account/src/environments/environment.ts",
-					"with": "modules/account/src/environments/environment.dev.ts"
+					"replace": "environments/environment.ts",
+					"with": "environments/environment.dev.ts"
 				}]
 			}
+		}
 	}
 }
