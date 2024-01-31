@@ -1,2 +1,11 @@
-<h1>Welcome secondApp</h1>
-<router-outlet></router-outlet>
+<div class="app">
+	<app-header *ngIf="authService.currUser().email"
+		class="app__header" (logout)="authService.logout()"></app-header>
+	<app-alert></app-alert>
+
+	<div class="app__main">
+		<router-outlet></router-outlet>
+	</div>
+
+	<app-footer class="app__footer"></app-footer>
+</div>

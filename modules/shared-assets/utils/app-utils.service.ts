@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 @Injectable({
 	providedIn: 'root'
 })
-export class AppUtils {
+export class AppUtilsService {
 
 	setUserColors(colors: any) {
 		for (const key in colors) {

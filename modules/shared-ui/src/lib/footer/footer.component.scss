@@ -1,0 +1,8 @@
+@import '../../../../../styles/variables';
+
+:host  {
+	height: 20px;
+	background-color: $sec;
+	margin-top: auto;
+	color: $text-pri;
+}

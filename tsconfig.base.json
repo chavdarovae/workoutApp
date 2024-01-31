@@ -12,10 +12,12 @@
 		"baseUrl": "./",
 		"paths": {
 			"@nodeApp/account": ["modules/account/src/index.ts"],
+			"@nodeApp/alert": ["modules/alerts/src/index.ts"],
 			"@nodeApp/environments": ["environments/environment.ts"],
-			"@nodeApp/styles": ["modules/shared-assetss"],
+			"@nodeApp/shared-ui": ["modules/shared-ui/src/index.ts"],
+			"@nodeApp/shared-assets": ["modules/shared-assets"],
 			"@nodeApp/workouts": ["modules/workouts/src/index.ts"],
-			"@nodeApp/alert": ["modules/alerts/src/index.ts"]
+			"@nodeApp/styles": ["styles/_variables.scss"],
 		}
 	}
 }

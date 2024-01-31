@@ -1,15 +1,13 @@
-import { AsyncPipe, NgIf } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AuthService } from '@nodeApp/account';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     standalone: true,
-	imports: [ NgIf, AsyncPipe, RouterModule ]
+	imports: [ RouterModule ]
 })
 export class HeaderComponent {
-	authService = inject(AuthService);
+	@Output() logout: EventEmitter<null> = new EventEmitter();
 }

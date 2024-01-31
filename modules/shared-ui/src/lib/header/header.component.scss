@@ -1,0 +1,21 @@
+@import 'styles/_variables';
+
+:host {
+	height: 50px;
+	background-color: $pri;
+
+	.menu {
+		height: 100%;
+	}
+
+	.logo {
+		height: 100%;
+		width: auto;
+
+		img {
+			height: 80%;
+			margin: 10% 0;
+			filter: invert(1);
+		}
+	}
+}

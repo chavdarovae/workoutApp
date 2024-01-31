@@ -23,8 +23,9 @@
 				"styles": [
 					"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 					"apps/secondApp/src/styles.scss",
-					"modules/shared-assets/styles/global-styles.scss",
-					"modules/shared-assets/styles/theme.scss"
+					"styles/global-styles.scss",
+					"styles/theme.scss",
+					"styles/_variables.scss"
 				],
 				"scripts": []
 			},

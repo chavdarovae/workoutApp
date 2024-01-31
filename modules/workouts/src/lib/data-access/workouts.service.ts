@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, Signal, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
-import { environment } from '@nodeApp/environments';
 import { AlertService } from '@nodeApp/alert';
+import { environment } from '@nodeApp/environments';
 import { BehaviorSubject, Observable, Subject, shareReplay, switchMap, tap } from 'rxjs';
 import { IWorkout } from '../util/interface/workout.interfaces';
 
@@ -66,7 +66,7 @@ export class WorkoutsService {
 		return this.createWorkoutSubject.asObservable().pipe(
 			switchMap((workout: IWorkout) => this.http.post<IWorkout>(this.workoutApi, workout)),
 			tap(() => {
-				this.alertSrvice.showAlert(new Alert('New workout has been created.', 'success'));
+				this.alertSrvice.showAlert('New workout has been created.', 'success');
 				this.router.navigate(['/workouts']);
 			})
 		)
@@ -80,14 +80,14 @@ export class WorkoutsService {
 				return this.http.patch<IWorkout>(this.workoutApi + '/' + actionData.workout?._id, actionData.workout).pipe(
 					tap(() => {
 						this.refreshList();
-						this.alertSrvice.showAlert(new Alert('The selected workout has been updated.', 'success'));
+						this.alertSrvice.showAlert('The selected workout has been updated.', 'success');
 					})
 				);
 			case 'delete':
 				return this.http.delete<IWorkout>(this.workoutApi + '/' + actionData.workout?._id).pipe(
 					tap(() => {
 						this.refreshList();
-						this.alertSrvice.showAlert(new Alert('The selected workout has been deleted.', 'success'));
+						this.alertSrvice.showAlert('The selected workout has been deleted.', 'success');
 					})
 				);
 		}
