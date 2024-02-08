@@ -1,9 +1,14 @@
 <div class="container menu row row--sp-btw">
 	<a class="logo" routerLink="">
-		<img src="../../../../assets/img/logo.png" alt="logo.png">
+		<img [src]="logoPath" alt="logo.png">
 	</a>
-	<a class="ml-a" routerLink="/about" routerLinkActive="router-link-active" mat-button>About</a>
-	<a routerLink="/workouts" routerLinkActive="router-link-active" mat-button>Workouts</a>
-	<span class="anchor-like" mat-button (click)="logout.emit()">Logout</span>
+
+	<a *ngFor="let item of menuItems; let first = first"
+		[routerLink]="item.path"
+		routerLinkActive="router-link-active"
+		[class]="first ?  'ml-a' :  'ml-20'"
+		mat-button>
+		{{item.title}}
+	</a>
 </div>
 

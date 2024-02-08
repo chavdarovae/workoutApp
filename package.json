@@ -8,6 +8,7 @@
 		"start:secondApp": "nx serve secondApp",
 		"build": "nx build",
 		"build:prod:firstApp": "nx build firstApp --configuration=production --base-href=https://chavdarovae.github.io/workoutApp/",
+		"build:prod:secondApp": "nx build secondApp --configuration=production --base-href=https://chavdarovae.github.io/workoutApp/",
 		"watch": "nx build --watch --configuration development",
 		"test": "nx test",
 		"deploy": "nx deploy --base-href /workoutApp/",
