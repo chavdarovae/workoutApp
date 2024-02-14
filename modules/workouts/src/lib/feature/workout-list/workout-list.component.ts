@@ -2,7 +2,7 @@ import { AsyncPipe, JsonPipe, NgIf } from '@angular/common';
 import { Component, OnInit, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Data, RouterLink } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { WorkoutsService } from '../../data-access/workouts.service';
 import { WorkoutPreviewComponent } from '../../ui/workout-preview/workout-preview.component';
 import { IWorkout } from '../../util/interface/workout.interfaces';
@@ -29,7 +29,9 @@ export class WorkoutListComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.workoutsService.refreshList();
-		this.data$ = this.activatedRoute.data;
+		this.data$ = this.activatedRoute.data.pipe(
+			tap((res) => console.log(res))
+		);
 	}
 
 	deleteWorkout(workout: IWorkout) {
