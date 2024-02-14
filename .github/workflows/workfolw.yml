@@ -2,10 +2,13 @@ name: GitHubPages Deploy
 
 on:
   push:
-    # branches:
-    #   - "main"
-    paths:
-      - 'apps/firstApp/**'
+    branches:
+      - "main"
+    # paths:
+    #   - 'apps/firstApp/**'
+
+env:
+  BEFORE_SHA: ${{ github.event.before }}
 
 jobs:
   build:
@@ -20,13 +23,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: echo "Installing" && npm install --force && npm run build:prod:firstApp
+        run: echo "Installing" && npm install --force
 
       - name: Build
-        run: echo "Building" && npm install --force && npm run build:prod:firstApp
-
-    #   - name: Lint
-    #     run: echo "Linting" && npm run lint:firstApp
+        run: echo "Building" && npm run build:prod:affected  -- --base=$BEFORE_SHA
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
