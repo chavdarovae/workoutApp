@@ -12,6 +12,7 @@ export const SECOND_APP_ROUTES: Routes = [
 	},
 	{
 		path: 'workouts',
-		loadChildren: () => import('@nodeApp/workouts').then(r => r.WORKOUT_ROUTES)
+		loadChildren: () => import('@nodeApp/workouts').then(r => r.WORKOUT_ROUTES),
+		data: { listViewTitle: 'Second application / Workout list view'}
 	}
 ];

@@ -1,7 +1,8 @@
 <div class="container">
 	<br>
 	<br>
-	<div class="row row--r-aligned">
+	<div class="row row--sp-btw">
+		<h1 *ngIf="data$ | async as data">{{data['listViewTitle']}}</h1>
 		<a [routerLink]="['/workouts/create']">
 			<button class="btn btn--symbol" mat-raised-button color="primary">+</button>
 		</a>

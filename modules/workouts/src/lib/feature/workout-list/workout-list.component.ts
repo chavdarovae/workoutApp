@@ -1,7 +1,8 @@
-import { JsonPipe } from '@angular/common';
+import { AsyncPipe, JsonPipe, NgIf } from '@angular/common';
 import { Component, OnInit, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Data, RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
 import { WorkoutsService } from '../../data-access/workouts.service';
 import { WorkoutPreviewComponent } from '../../ui/workout-preview/workout-preview.component';
 import { IWorkout } from '../../util/interface/workout.interfaces';
@@ -11,11 +12,14 @@ import { IWorkout } from '../../util/interface/workout.interfaces';
     templateUrl: './workout-list.component.html',
     styleUrls: ['./workout-list.component.scss'],
     standalone: true,
-    imports: [RouterLink, MatButtonModule, WorkoutPreviewComponent, JsonPipe],
+    imports: [RouterLink, MatButtonModule, WorkoutPreviewComponent, JsonPipe, AsyncPipe, NgIf],
 	providers: [WorkoutsService]
 })
 export class WorkoutListComponent implements OnInit {
 	private workoutsService = inject(WorkoutsService);
+	private activatedRoute = inject(ActivatedRoute);
+	data$!: Observable<Data>;
+
 	workoutList = this.workoutsService.workoutsSnl; // reference to signal not the value of the signal
 
 	totalWorkouts = computed(()=> this.workoutList().length);
@@ -25,6 +29,7 @@ export class WorkoutListComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.workoutsService.refreshList();
+		this.data$ = this.activatedRoute.data;
 	}
 
 	deleteWorkout(workout: IWorkout) {

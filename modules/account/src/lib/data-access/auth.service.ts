@@ -40,6 +40,8 @@ export class AuthService {
 				case 'logout':
 					return this.http.get<any>(this.accountApi + '/logout').pipe(
 						tap(() => {
+							console.log('huhuh');
+
 							this._currUserSn.set(ANONYMOS_USER);
 							sessionStorage.removeItem('currUser');
 							this.router.navigate(['/login']);
