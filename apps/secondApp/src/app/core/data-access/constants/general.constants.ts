@@ -27,6 +27,6 @@ export const SECOND_APP_MENUS: IMenuItem[] = [
 	{
 		id: 3,
 		path: '/logout',
-		title: 'logout',
+		title: 'Logout',
 	}
 ];

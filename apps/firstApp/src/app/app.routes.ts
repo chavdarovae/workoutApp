@@ -9,10 +9,5 @@ export const FIRST_APP_ROUTES: Routes = [
 	{
 		path: '',
 		loadChildren: () => import('@nodeApp/account').then(r => r.ACCOUNT_ROUTES)
-	},
-	{
-		path: 'workouts',
-		loadChildren: () => import('@nodeApp/workouts').then(r => r.WORKOUT_ROUTES),
-		data: { listViewTitle: 'First application / Workout list view'}
 	}
 ];
