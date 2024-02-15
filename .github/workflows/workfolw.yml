@@ -28,9 +28,6 @@ jobs:
       - name: 'Derive appropriate SHAs for base and head for `nx affected` commands'
         uses: nrwl/nx-set-shas@v2
 
-      - name: Set up dependencies
-        uses: ./.github/actions/setup-dependencies
-
       - name: Install dependencies
         run: echo "Installing" && npm install --force
 
