@@ -25,14 +25,9 @@ jobs:
       - name: Install dependencies
         run: echo "Installing" && npm install --force
 
-
-      - uses: nrwl/nx-set-shas@v3
-      # This line is needed for nx affected to work when CI is running on a PR
-      - run: git branch --track main origin/main
-
       - name: Build
         # run: echo "Building" && npm run build:prod:affected  -- --base=remotes/origin/main
-        run: echo "Building" && npm run build:prod:affected
+        run: echo "Building" && npm run build:prod:affected --base=remotes/origin/main
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
