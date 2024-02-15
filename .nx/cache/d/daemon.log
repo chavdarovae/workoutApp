@@ -7331,3 +7331,21 @@ Error: This workspace is more than a week old and is not connected. Workspaces m
 [NX Daemon Server] - 2024-02-15T22:53:33.956Z - Done uploading file artifacts
 [NX Daemon Server] - 2024-02-15T22:53:33.956Z - Sending EndRun request
 [NX Daemon Server] - 2024-02-15T22:53:33.967Z - Closed a connection. Number of open connections: 4
+[NX Daemon Server] - 2024-02-15T22:53:34.126Z - Error when sending EndRun
+Error: This workspace is more than a week old and is not connected. Workspaces must be connected within 7 days of creation. Claim your workspace at https://cloud.nx.app
+    at Timeout._onTimeout (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/.cache/nx/cloud/2402.08.4/lib/daemon/process-run-end.js:18:5441)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[NX Daemon Server] - 2024-02-15T23:01:19.358Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-02-15T23:01:19.359Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:01:19.459Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T23:01:19.459Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-02-15T23:01:19.459Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T23:01:19.536Z - Time taken for 'hash changed files from watcher' 0.4017129996791482ms
+[NX Daemon Server] - 2024-02-15T23:01:22.379Z - [WATCHER]: modules/account/src/lib/data-access/auth.service.ts was modified
+[NX Daemon Server] - 2024-02-15T23:01:22.379Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:01:22.580Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T23:01:22.580Z - [REQUEST]: modules/account/src/lib/data-access/auth.service.ts
+[NX Daemon Server] - 2024-02-15T23:01:22.580Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T23:01:22.623Z - Time taken for 'hash changed files from watcher' 0.24838300049304962ms
+[NX Daemon Server] - 2024-02-15T23:01:22.652Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:01:23.885Z - [WATCHER]: Processing file changes in outputs
