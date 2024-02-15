@@ -7201,3 +7201,25 @@ Error: This workspace is more than a week old and is not connected. Workspaces m
 [NX Daemon Server] - 2024-02-15T22:35:45.450Z - [REQUEST]: .github/workflows/workfolw.yml
 [NX Daemon Server] - 2024-02-15T22:35:45.450Z - [REQUEST]: 
 [NX Daemon Server] - 2024-02-15T22:35:45.501Z - Time taken for 'hash changed files from watcher' 0.7514760000631213ms
+[NX Daemon Server] - 2024-02-15T22:48:24.792Z - [WATCHER]: .github/workflows/workfolw.yml was created or restored
+[NX Daemon Server] - 2024-02-15T22:48:24.793Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T22:48:24.893Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T22:48:24.893Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-02-15T22:48:24.893Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T22:48:24.948Z - Time taken for 'hash changed files from watcher' 0.27761599980294704ms
+[NX Daemon Server] - 2024-02-15T22:49:29.721Z - [WATCHER]: modules/account/src/lib/data-access/auth.service.ts was modified
+[NX Daemon Server] - 2024-02-15T22:49:29.721Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T22:49:29.923Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T22:49:29.923Z - [REQUEST]: modules/account/src/lib/data-access/auth.service.ts
+[NX Daemon Server] - 2024-02-15T22:49:29.923Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T22:49:30.043Z - Time taken for 'hash changed files from watcher' 0.25500399991869926ms
+[NX Daemon Server] - 2024-02-15T22:49:30.139Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T22:49:31.485Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T22:50:03.909Z - [WATCHER]: modules/account/src/lib/data-access/auth.service.ts was modified
+[NX Daemon Server] - 2024-02-15T22:50:03.910Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T22:50:04.311Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T22:50:04.312Z - [REQUEST]: modules/account/src/lib/data-access/auth.service.ts
+[NX Daemon Server] - 2024-02-15T22:50:04.312Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T22:50:04.393Z - Time taken for 'hash changed files from watcher' 0.260797000490129ms
+[NX Daemon Server] - 2024-02-15T22:50:05.493Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T22:50:05.610Z - [WATCHER]: Processing file changes in outputs
