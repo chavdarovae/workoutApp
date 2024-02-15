@@ -34,7 +34,6 @@ export class AuthService {
 							sessionStorage.setItem('currUser', JSON.stringify(user));
 							this.router.navigate(['/workouts']);
 							console.log('You are logged in');
-							console.log('And again');
 						}),
 						first()
 					);

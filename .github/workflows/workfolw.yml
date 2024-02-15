@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         # run: echo "Building" && npm run build:prod:affected  -- --base=remotes/origin/main
-        run: echo "Building" && npm run build:prod:firstApp
+        run: echo "Building" && npm run build:prod:affected
 
       - name: List Files in Root Directory
         run: ls -Rd */
