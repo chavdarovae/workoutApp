@@ -26,7 +26,8 @@ jobs:
         run: echo "Installing" && npm install --force
 
       - name: Build
-        run: echo "Building" && npm run build:prod:firstApp
+        # run: echo "Building" && npm run build:prod:affected  -- --base=remotes/origin/main
+        run: echo "Building" && npm run build:prod:affected
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1

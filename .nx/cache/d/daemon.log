@@ -7177,3 +7177,9 @@ Error: This workspace is more than a week old and is not connected. Workspaces m
 [NX Daemon Server] - 2024-02-15T22:12:29.275Z - [REQUEST]: .github/workflows/workfolw.yml
 [NX Daemon Server] - 2024-02-15T22:12:29.275Z - [REQUEST]: 
 [NX Daemon Server] - 2024-02-15T22:12:29.325Z - Time taken for 'hash changed files from watcher' 0.35584399988874793ms
+[NX Daemon Server] - 2024-02-15T22:16:59.028Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-02-15T22:16:59.029Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T22:16:59.429Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T22:16:59.429Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-02-15T22:16:59.429Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T22:16:59.486Z - Time taken for 'hash changed files from watcher' 0.21740800002589822ms
