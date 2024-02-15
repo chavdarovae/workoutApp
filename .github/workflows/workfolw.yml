@@ -19,8 +19,17 @@ jobs:
         node-version: [18.17.1]
 
     steps:
-      - name: checkout
+      - name: Checkout source code
         uses: actions/checkout@v3
+        with:
+          # Required by nrwl/nx-set-shas
+          fetch-depth: 0
+
+      - name: 'Derive appropriate SHAs for base and head for `nx affected` commands'
+        uses: nrwl/nx-set-shas@v2
+
+      - name: Set up dependencies
+        uses: ./.github/actions/setup-dependencies
 
       - name: Install dependencies
         run: echo "Installing" && npm install --force
