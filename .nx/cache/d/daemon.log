@@ -7501,3 +7501,31 @@ Error: This workspace is more than a week old and is not connected. Workspaces m
 Error: This workspace is more than a week old and is not connected. Workspaces must be connected within 7 days of creation. Claim your workspace at https://cloud.nx.app
     at Timeout._onTimeout (/Users/emiliyachavdarova/Personal/nodeApp/frontend/node_modules/.cache/nx/cloud/2402.08.4/lib/daemon/process-run-end.js:18:5441)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[NX Daemon Server] - 2024-02-15T23:28:37.214Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-02-15T23:28:37.214Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:28:37.315Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T23:28:37.315Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-02-15T23:28:37.315Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T23:28:37.378Z - Time taken for 'hash changed files from watcher' 0.7045880006626248ms
+[NX Daemon Server] - 2024-02-15T23:29:11.787Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-02-15T23:29:11.788Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:29:11.989Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T23:29:11.989Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-02-15T23:29:11.989Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T23:29:12.030Z - Time taken for 'hash changed files from watcher' 0.39597800001502037ms
+[NX Daemon Server] - 2024-02-15T23:29:14.426Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-02-15T23:29:14.426Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:29:14.532Z - [WATCHER]: .github/workflows/workfolw.yml was modified
+[NX Daemon Server] - 2024-02-15T23:29:14.533Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:29:14.828Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T23:29:14.829Z - [REQUEST]: .github/workflows/workfolw.yml
+[NX Daemon Server] - 2024-02-15T23:29:14.829Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T23:29:14.871Z - Time taken for 'hash changed files from watcher' 0.5289480006322265ms
+[NX Daemon Server] - 2024-02-15T23:29:22.876Z - [WATCHER]: modules/account/src/lib/data-access/auth.service.ts was modified
+[NX Daemon Server] - 2024-02-15T23:29:22.876Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:29:23.335Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-15T23:29:23.685Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-15T23:29:23.685Z - [REQUEST]: modules/account/src/lib/data-access/auth.service.ts
+[NX Daemon Server] - 2024-02-15T23:29:23.686Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-15T23:29:23.777Z - Time taken for 'hash changed files from watcher' 0.3280950002372265ms
+[NX Daemon Server] - 2024-02-15T23:29:24.565Z - [WATCHER]: Processing file changes in outputs
