@@ -29,6 +29,9 @@ jobs:
         # run: echo "Building" && npm run build:prod:affected  -- --base=remotes/origin/main
         run: echo "Building" && npm run build:prod:affected --base=remotes/origin/main
 
+      - name: List Files in Root Directory
+        run: ls /
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
