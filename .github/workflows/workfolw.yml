@@ -19,16 +19,37 @@ jobs:
         node-version: [18.17.1]
 
     steps:
-      - name: checkout
+      - name: Checkout source code
         uses: actions/checkout@v3
+        with:
+          # Required by nrwl/nx-set-shas
+          fetch-depth: 0
+
+      - name: 'Derive appropriate SHAs for base and head for `nx affected` commands'
+        uses: nrwl/nx-set-shas@v2
 
       - name: Install dependencies
         run: echo "Installing" && npm install --force
 
       - name: Build
-        run: echo "Building" && npm run build:prod:firstApp
+        # run: echo "Building" && npm run build:prod:affected  -- --base=remotes/origin/main
+        run: echo "Building" && npm run build:prod:affected --base=origin/main --head=HEAD
+
+    #   - name: List Files in Root Directory
+    #     run: ls -Rd */
+
+
+      - name: Check if directory exists
+        id: check_directory
+        run: |
+          if [ -d "dist/apps/firstApp" ]; then
+            echo "::set-output name=exists::true"
+          else
+            echo "::set-output name=exists::false"
+          fi
 
       - name: Deploy
+        if: steps.check_directory.outputs.exists == 'true'
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-branches
