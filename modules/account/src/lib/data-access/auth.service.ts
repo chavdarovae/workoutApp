@@ -34,7 +34,7 @@ export class AuthService {
 							sessionStorage.setItem('currUser', JSON.stringify(user));
 							this.router.navigate(['/workouts']);
 							console.log('You are logged in');
-							console.log('Show me more12');
+							console.log('Show me more13');
 						}),
 						first()
 					);
