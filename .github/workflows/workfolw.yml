@@ -7,9 +7,6 @@ on:
     # paths:
     #   - 'apps/firstApp/**'
 
-env:
-  BEFORE_SHA: ${{ github.event.before }}
-
 jobs:
   build:
     runs-on: ubuntu-latest

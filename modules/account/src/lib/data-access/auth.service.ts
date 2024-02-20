@@ -32,9 +32,7 @@ export class AuthService {
 						tap((user: IAccount) => {
 							this._currUserSn.set(user);
 							sessionStorage.setItem('currUser', JSON.stringify(user));
-							this.router.navigate(['/workouts']);
-							console.log('You are logged in');
-							console.log('Show me more17');
+							this.router.navigate(['/about']);
 						}),
 						first()
 					);
