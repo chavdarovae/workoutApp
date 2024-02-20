@@ -33,6 +33,7 @@ export class AuthService {
 							this._currUserSn.set(user);
 							sessionStorage.setItem('currUser', JSON.stringify(user));
 							this.router.navigate(['/about']);
+							console.log('logged');
 						}),
 						first()
 					);
