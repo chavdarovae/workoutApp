@@ -23,7 +23,7 @@ jobs:
         run: echo "Installing" && npm install --force
 
       - name: Build
-        run: echo "Building" && npm run build:prod:firstApp
+        run: echo "Building" && npm install --force && npm run build:prod:firstApp
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
